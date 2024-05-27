@@ -3,7 +3,7 @@
 
 ### 5월 27일 (월)
 <details>
-<summary>Git</summary>
+<summary>GIT</summary>
 형상관리 시스템 (Software Configuration Management) = 버전관리시스템 
 
 Version = 변경에 대해 부여한 구분 번호 = (식별자)
