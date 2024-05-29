@@ -2,7 +2,9 @@
 ***
 [5월 27일 (월) : GIT소개 / 웹 애플리케이션 구동 원리 / CPU, 기계어, OS의 관계 이해](#5월-27일-월)   
 [5월 28일 (화) : 컴파일, 인터프리터, 하이브리드 방식 / JAVA 컴파일 및 실행 원리](#5월-28일-화)   
-[5월 29일 (수) : ](#5월-29일-수)
+[5월 29일 (수) : JAVA컴파일과 실행 / 프로젝트 디렉토리 구조 / 빌드 도구](#5월-29일-수)
+[5월 30일 (목) : 내일의 수업 내용](#5월-30일-목)
+
 
 
 ### 5월 27일 (월)
@@ -133,4 +135,91 @@ JAVA는 JAVA컴파일러에 의해 바이트 코드(중간 코드)로 컴파일 
 ***
 
 ### 5월 29일 (수)
+##### JAVA 컴파일과 실행
+*컴파일
+        $javac 소스파일명 => Hello.class 파일 생성
+
+*윈도우에서 컴파일할 때 문자집합(charset) 오류가 발생하는 이유
+        ->윈도우 시스템 기본 인코딩과 소스 파일 인코딩의 불일치
+ex) vscode에서 소스 파일 저장(vscode는 UTF-8형식으로 문자를 저장함) -> 윈도우는 os의 기본 문자집합을 사용 즉 소스 파일이 MS949 규칙에 따라 저장되었을 거라 착각 -> 컴파일 오류 발생
+charset 오류 해결 방법
+=> $javac -encoding UTF-8 Hello.java
+        -> 소스파일이 어떤 규칙에 따라 문자를 저장했는지 알려주는 옵션
+$javac -d bin Hello.java = 컴파일 결과 파일을 둘 폴더를 지정, 즉 현재 위치에 존재하는 bin 폴더에 class파일 생성 폴더가 없으면 폴더 생성 후 저장
+$java -classpath bin Hello = cp 클래스 파일이 있는 위치를 알림 즉 "실행할 클래스파일이 bin에 있는데 이름은 Hello야"
+      -cp
+
+***
+##### 프로젝트 디렉토리 구조
+* 소스파일 폴더와 컴파일 결과 파일 분리 = 소스가 분리되어 배포하기 편해짐
+        src/*.java 
+        bin/*.class
+* 개발 관리와 프로젝트, 디렉토리
+        App1 -> 프로젝트A -> Project A - src
+                                       - bin
+  
+        App2 -> 프로젝트B -> Project B - src
+                                       - bin
+
+* GIT 저장소와 프로젝트 폴더
+        case1.
+              하나의 저장소에 여러 프로젝트 존재
+              * 버전은 저장소 단위로 관리되기 때문에 프로젝트 단위로 관리할 경우 좋지않은 방식
+
+        case2.
+              하나의 저장소에 메인 프로젝트와 메인 프로젝트를 위해 존재하는 여러 서브 프로젝트 존재
+              
+        case3.
+              하나의 저장소에 하나의 프로젝트 1:1
+        
+        <br>
+       
+        Gradle project 디렉토리 구조
+        myapp <- root project 디렉토리
+        myapp/app <- main project
+                app/src/
+                app/build.gradle <- main프로젝트의 빌드 명세서
+        myapp/gradle
+                gradle/wrapper <- gradle이 설치 안된 경우 자동으로 설치해주는 도구
+                gradle/libs.versions.toml <-의존 라이브러리 버전 정보
+        myapp/gitattributes <- GIT 보조 설정 확인
+        myapp/gitignore <- GIT ignore
+        myapp/gradlew <- gradlew이 로컬 컴퓨터에 설치가 안된경우 사용할 수 있는 도구 (윈도우용)
+        myapp/gradle.bet <- 유/리눅스용
+        myapp/setting.gradle <- gradle 메인 설정
+
+        maven 표준 프로젝트 디렉토리로 구성하기
+        $gradle init
+***
+##### 빌드 도구
+        1. ant
+                build.xml
+
+        2. maven
+                pom.xml
+                의존 라이브러리 관리
+                의존 라이브러리 저장소에서 빌드할 때 다운로드(.jar)
+                *jar -> java archive
+                        자바 실행과 관련된 파일들을 한 파일로 압축한 것 war, ear, tar
+
+
+        3. gradle
+                build.gradle
+                빌드 과정을 정교하게 제어할 수 있도록 프로그래밍 언어를 사용하여 빌드스크립트 파일 작성
+                Groovy
+                kotlin
+                maven 저장소(의존 라이브러리 저장소) 사용
+
+*빌드 도구와 JDK
+
+
+
+        
+
+  
+
+
+***
+
+### 5월 30일 (목)
 
