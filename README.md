@@ -139,10 +139,10 @@ JAVA는 JAVA컴파일러에 의해 바이트 코드(중간 코드)로 컴파일 
 ### 5월 29일 (수)
 ##### JAVA 컴파일과 실행
 *컴파일
-        $javac 소스파일명 => Hello.class 파일 생성
+        javac 소스파일명 => Hello.class 파일 생성
 
 ##### 윈도우에서 컴파일할 때 문자집합(charset) 오류가 발생하는 이유
-        ->윈도우 시스템 기본 인코딩과 소스 파일 인코딩의 불일치
+        윈도우 시스템 기본 인코딩과 소스 파일 인코딩의 불일치
 Ex) 
 vscode에서 소스 파일 저장(vscode는 UTF-8형식으로 문자를 저장함) -> 윈도우는 os의 기본 문자집합을 사용 즉 소스 파일이 MS949 규칙에 따라 저장되었을 거라 착각 -> 컴파일 오류 발생
 
@@ -238,21 +238,20 @@ vscode에서 소스 파일 저장(vscode는 UTF-8형식으로 문자를 저장�
 ##### 빌드 도구 소개
 
         1. ant
-                build.xml
+                - build.xml
 
         2. maven
-                pom.xml
-                의존 라이브러리 관리
-                의존 라이브러리 저장소에서 빌드할 때 다운로드(.jar)
-                *jar -> java archive
+                - pom.xml
+                - 의존 라이브러리 관리
+                - 의존 라이브러리 저장소에서 빌드할 때 다운로드(.jar)
+                  *jar -> java archive
                         자바 실행과 관련된 파일들을 한 파일로 압축한 것 war, ear, tar
 
         3. gradle
-                build.gradle
-                빌드 과정을 정교하게 제어할 수 있도록 프로그래밍 언어를 사용하여 빌드스크립트 파일 작성
-                Groovy
-                kotlin
-                maven 저장소(의존 라이브러리 저장소) 사용
+                - build.gradle
+                - 빌드 과정을 정교하게 제어할 수 있도록 프로그래밍 언어를 사용하여 빌드스크립트 파일 작성
+                - Groovy, kotlin
+                - maven 저장소(의존 라이브러리 저장소) 사용
 
 
 ***
@@ -262,11 +261,54 @@ vscode에서 소스 파일 저장(vscode는 UTF-8형식으로 문자를 저장�
 ##### Bytecode로 프로그래밍하기
 - hello world 출력하기
 - 참고사이트 : https://medium.com/@davethomas_9528/writing-hello-world-in-java-byte-code-34f75428e0ad
-**자바가 힘들 때 바이트 코드를 보고 기운내자 :baby_bottle:**
+        **자바가 힘들 때 바이트 코드를 보고 기운내자 :baby_bottle:**
 <br>
 
 ##### 자바 기초 프로그래밍
+Test.java 파일에 A, B, C라는 3개의 클래스가 있다고 가정할 때 Test.java파일을 컴파일 하면 A, B, C **3개의 클래스 파일이 생성**됨
 
+> 자바의 컴파일러(javac)는 소스파일의 각 클래스를 개별적인 클래스 파일로 컴파일함
+
+
+<br>
+
+##### public 클래스와 소스 파일명
+1. Test2.java
+        public class x {}
+        class Y {}
+        class Z {}
+위 소스파일은 컴파일 오류 -> **public 클래스가 있는 경우 소스파일명은 public클래스명과 같아야 한다.**
+
+2. X.java
+        public class X {}
+        public class Y {}
+위 소스파일도 컴파일 오류 -> public 클래스 x가 소스파일명과 일치하지만 y도 public 클래스이기 때문에 컴파일 오류 -> **1개의 class 파일엔 1개의 public class**
+
+* 1소스파일엔 1클래스블록이 좋다
+        클래스를 정의한 파일을 찾기 쉽다
+        파일명과 클래스명을 같게한다
+
+<br>
+
+##### 애플리케이션 entry point: main() 메서드
+entry point = 프로그램 시작점
+컴파일된 클래스 파일을 실행할 때 JVM은 클래스의 main()메소드를 찾아서 실행한다 main메소드가 없다면 실행 오류 발생
+
+<br>
+
+##### 애플리케이션 아규먼트 다루는 방법: main(String[] args)
+public static void main(String[] args){ 
+        //파라미터 args의 변수명은 변경돼도 상관없음
+}
+
+**애플리케이션 아규먼트(argument) = 전달 하는 값(인자)**
+**파라미터 = 아규먼트 즉 인자값을 전달 받는 변수**
+
+java -classpath - Test5 [aaa bbb ccc] 
+aaa bbb ccc가 애플리케이션 아규먼트
+ args[0] = aaa
+ args[1] = bbb
+ args[2] = ccc
 
 
 
