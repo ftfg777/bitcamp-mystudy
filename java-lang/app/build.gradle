@@ -18,10 +18,6 @@ java {
     }
 }
 
-application {
-    mainClass = 'org.example.App'
-}
-
 tasks.named('test') {
     useJUnitPlatform()
 }

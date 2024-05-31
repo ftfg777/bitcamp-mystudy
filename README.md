@@ -4,7 +4,7 @@
 [5월 28일 (화) : 컴파일, 인터프리터, 하이브리드 방식 / JAVA 컴파일 및 실행 원리](#5월-28일-화)   
 [5월 29일 (수) : JAVA컴파일과 실행 / 프로젝트 디렉토리 구조 / 빌드 도구](#5월-29일-수)
 [5월 30일 (목) : Bytecode로 프로그래밍하기 / 자바 기초 프로그래밍](#5월-30일-목)
-[5월 31일 (금) : 내일의 수업 내용](#5월-31일-금)
+[5월 31일 (금) : 패키지 / 데이터 타입과 리터럴 / 문자와 문자집합](#5월-31일-금)
 
 
 
@@ -166,8 +166,8 @@ vscode에서 소스 파일 저장(vscode는 UTF-8형식으로 문자를 저장�
 ***
 ##### 프로젝트 디렉토리 구조
 * 소스파일 폴더와 컴파일 결과 파일 분리 = 소스가 분리되어 배포하기 편해짐
-        src/*.java = 소스파일
-        bin/*.class = 컴파일 결과 파일
+* src/*.java = 소스파일
+* bin/*.class = 컴파일 결과 파일
 ##### 개발 관리와 프로젝트, 디렉토리
 
         App1 -> 프로젝트A -> Project A - src, bin
@@ -274,46 +274,160 @@ Test.java 파일에 A, B, C라는 3개의 클래스가 있다고 가정할 때 T
 
 ##### public 클래스와 소스 파일명
 1. Test2.java
+   
         public class x {}
         class Y {}
         class Z {}
-위 소스파일은 컴파일 오류 -> **public 클래스가 있는 경우 소스파일명은 public클래스명과 같아야 한다.**
+
+        [컴파일 오류]
+        public 클래스가 있는 경우 소스파일명은 public클래스명과 같아야 한다.
 
 2. X.java
+   
         public class X {}
         public class Y {}
-위 소스파일도 컴파일 오류 -> public 클래스 x가 소스파일명과 일치하지만 y도 public 클래스이기 때문에 컴파일 오류 -> **1개의 class 파일엔 1개의 public class**
+        
+        [컴파일 오류]
+        public 클래스 x가 소스파일명과 일치하지만 y도 public 클래스이기 때문에
+        
+        **1개의 class 파일엔 1개의 public class**
 
-* 1소스파일엔 1클래스블록이 좋다
-        클래스를 정의한 파일을 찾기 쉽다
-        파일명과 클래스명을 같게한다
+* 1 소스파일엔 1 클래스블록이 좋다
+* 클래스를 정의한 파일을 찾기 쉽다
+* 파일명과 클래스명을 같게한다
 
 <br>
 
 ##### 애플리케이션 entry point: main() 메서드
 entry point = 프로그램 시작점
+
 컴파일된 클래스 파일을 실행할 때 JVM은 클래스의 main()메소드를 찾아서 실행한다 main메소드가 없다면 실행 오류 발생
 
 <br>
 
 ##### 애플리케이션 아규먼트 다루는 방법: main(String[] args)
+
 public static void main(String[] args){ 
+        
         //파라미터 args의 변수명은 변경돼도 상관없음
 }
 
-**애플리케이션 아규먼트(argument) = 전달 하는 값(인자)**
-**파라미터 = 아규먼트 즉 인자값을 전달 받는 변수**
+
+>애플리케이션 아규먼트(argument) = 전달 하는 값(인자)
+
+>파라미터 = 아규먼트 즉 인자값을 전달 받는 변수
 
 java -classpath - Test5 [aaa bbb ccc] 
 aaa bbb ccc가 애플리케이션 아규먼트
+
  args[0] = aaa
+
  args[1] = bbb
+
  args[2] = ccc
-
-
-
-
 
 ***
 
 ### 5월 31일 (금)
+
+##### 패키지
+- package : 클래스를 분류(역할에 따라)하는 문법
+ 
+- bitcamp-mystudy/java-lang/app/src/main/java/study/lang/literal
+  
+        - bitcamp-mystudy = git 저장소
+        - java-lang = project 폴더
+        - app = main project
+        - src/main/java = 소스 폴더
+        - study = 패키지
+        - lang = 패키지
+        - literal = 패키지
+
+- 컴파일 <br>
+        - javac -d app/build/classes/java/main app/src/main/java/study/lang/literal/Test01.java
+  
+        - 컴파일 결과를 둘 위치 옵션에 패키지 명을 지정하지 않아도 패키지 구조대로 생성됨
+
+- 실행 <br>
+        - java -cp app/build/classes/java/main study.lang.literal.Test01
+
+        - 컴파일과 다르게 클래스 파일을 실행할 땐 패키지는 .으로 연결
+
+> 실습할 때 클래스 파일 위치와 패키지 구조를 한 번에 묶어서 쳐버리는 바람에 계속 클래스를 찾을 수 없다는 오류가 떠서 당황.. 꼭 기억하자 :cursing_face:
+
+<br>
+
+##### 주석 (comment)
+* 코드 설명: 코드의 목적이나 동작을 설명하는 데 사용
+* 디버깅: 특정 코드를 임시로 비활성화하여 디버깅할 때 사용
+* 문서화: Javadoc 도구를 사용하여 자동으로 API 문서를 생성할 때 사용
+
+##### javadoc
+
+문서 주석은 /**로 시작하여 */로 끝남
+
+Javadoc 도구를 사용하여 자동으로 문서화를 생성할 때 사용문서 주석은 클래스, 메서드, 필드 등에 설명을 추가하는 데 유용함
+
+```
+/**
+ * 이 클래스는 주석 예제를 보여줍니다.
+ */
+public class CommentExample {
+
+    /**
+     * 이 메서드는 프로그램의 진입점입니다.
+     * @param args 커맨드 라인 인수
+     */
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+
+    /**
+     * 두 숫자를 더합니다.
+     * @param a 첫 번째 숫자
+     * @param b 두 번째 숫자
+     * @return 두 숫자의 합
+     */
+    public int add(int a, int b) {
+        return a + b;
+    }
+}
+```
+> API문서란?
+> App programming 할 때 사용하는 클래스나 메소드의 사용 설명서
+
+##### Javadoc 도구 사용 예제
+
+* javadoc -encoding UTF-8 -charset UTF-8 -d docs -sourcepath app/src/main/java com.eomcs.lang.ex02
+
+위의 문서 주석을 사용하여 Javadoc 도구를 실행하면 자동으로 HTML 형식의 API 문서가 생성
+
+
+##### Annotation
+
+* 컴파일러나 JVM에게 전달하는 특별한 정보
+  
+
+##### 데이터 타입과 리터럴
+* Literal : 값을 표현한 것
+* 정수
+   * byte (1) 
+   * short (2)  
+   * int (4)
+   * long (8) : 100L, 100l
+* 부동소수점
+   * float (4) : 3.14f, 3.14F
+   * double (8)
+* 문자
+   * char (2)
+* 논리
+   * boolen (int, byte) : true, false
+      * 일반적으로 int type, 배열의 경우 byte type을 가짐
+* 문자열
+   * String
+
+
+
+
+
+
