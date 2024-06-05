@@ -5,9 +5,9 @@
 [5월 29일 (수) : JAVA컴파일과 실행 / 프로젝트 디렉토리 구조 / 빌드 도구](#5월-29일-수) <br>
 [5월 30일 (목) : Bytecode로 프로그래밍하기 / 자바 기초 프로그래밍](#5월-30일-목) <br>
 [5월 31일 (금) : 패키지 / 데이터 타입과 리터럴 / 문자와 문자집합](#5월-31일-금) <br>
-[6월 3일 (월) : 문자와 문자집합 정수,부동소수점을 메모리에 저장하는 원리 ](#6월-3일-월)
-[6월 4일 (화) : 변수 선언 의미와 방법 / 저장 값의 유효 범위 / Eclipse IDE 프로젝트 임포트 방법 ](#6월-4일-화)
-[6월 5일 (수) : 실습 프로젝트 준비 / 인텔리제이 설치 및 설정 ](#6월-5일-수)
+[6월 3일 (월) : 문자와 문자집합 정수,부동소수점을 메모리에 저장하는 원리 ](#6월-3일-월)<br>
+[6월 4일 (화) : 변수 선언 의미와 방법 / 저장 값의 유효 범위 / Eclipse IDE 프로젝트 임포트 방법 ](#6월-4일-화)<br>
+[6월 5일 (수) : 실습 프로젝트 준비 ](#6월-5일-수)
 
 
 
@@ -709,18 +709,23 @@ git액션은 .git폴더(깃 백업 폴더)로 인해 작동되는 것 .git폴더
    - myapp 프로젝트 생성
    - a. 자바 프로젝트 준비
      - [app-01/README.md](https://github.com/eomjinyoung/bitcamp-study/blob/main/myapp/app-01/README.md)
-     - 소스 코드 : 
+
    - b. 리터럴과 변수를 사용해서 문자열 출력하기
      - [app-02/README.md](https://github.com/eomjinyoung/bitcamp-study/tree/main/myapp/app-02/README.md)
-     - 소스 코드 :
+  
    - c. ANSI 이스케이프 코드를 사용하여 출력 문자열 꾸미기
      - [app-03/README.md](https://github.com/eomjinyoung/bitcamp-study/blob/main/myapp/app-03/README.md)
-     - 소스 코드 :
+
    - d. 키보드 입력 다루기
      - [app-03/README.md](https://github.com/eomjinyoung/bitcamp-study/blob/main/myapp/app-04/README.md)   
-     - 소스 코드 :
+  
+   - 최종 소스 코드 : [myapp2.App.java](https://github.com/ftfg777/bitcamp-mystudy/blob/main/myapp2/app/src/main/java/bitcamp/myapp/App.java)
+```
+  gradle 프로젝트에선 기본 입력 스트림이 empty stream임. 아래 코드를 넣어야 키보드 입력을 받을 수 있음
+  
+run {
+    standardInput = System.in // 기본 값은 empty stream 이다.
+}
+```
 
- - 개발 도구
-   - IntelliJ IDE 설치 및 설정 
-   - [파일 이름](https://github.com/계정명/저장소명/blob/브랜치명/경로/파일명)
 
