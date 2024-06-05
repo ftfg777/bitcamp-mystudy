@@ -721,7 +721,7 @@ git액션은 .git폴더(깃 백업 폴더)로 인해 작동되는 것 .git폴더
   
    - 최종 소스 코드 : [myapp2.App.java](https://github.com/ftfg777/bitcamp-mystudy/blob/main/myapp2/app/src/main/java/bitcamp/myapp/App.java)
 ```
-  gradle 프로젝트에선 기본 입력 스트림이 empty stream임. 아래 코드를 넣어야 키보드 입력을 받을 수 있음
+  gradle 프로젝트에선 기본 입력 스트림이 empty stream임. build.gradle 빌드 스크립트 파일에 아래 코드를 넣어야 키보드 입력을 받을 수 있음
   
 run {
     standardInput = System.in // 기본 값은 empty stream 이다.
