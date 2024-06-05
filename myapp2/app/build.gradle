@@ -21,6 +21,7 @@ dependencies {
 
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
+
     // This dependency is used by the application.
     implementation libs.guava
 }
@@ -42,8 +43,6 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-
 run {
-    standardInput = System.in
+    standardInput = System.in // 기본 값은 empty stream 이다.
 }
-

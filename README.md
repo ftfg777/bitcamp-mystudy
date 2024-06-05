@@ -5,12 +5,14 @@
 [5월 29일 (수) : JAVA컴파일과 실행 / 프로젝트 디렉토리 구조 / 빌드 도구](#5월-29일-수) <br>
 [5월 30일 (목) : Bytecode로 프로그래밍하기 / 자바 기초 프로그래밍](#5월-30일-목) <br>
 [5월 31일 (금) : 패키지 / 데이터 타입과 리터럴 / 문자와 문자집합](#5월-31일-금) <br>
-[6월 3일 (월) : 문자와 문자집합 / 정수,부동소수점을 메모리에 저장하는 원리 ](#6월-3일-월)
+[6월 3일 (월) : 문자와 문자집합 정수,부동소수점을 메모리에 저장하는 원리 ](#6월-3일-월)
+[6월 4일 (화) : 변수 선언 의미와 방법 / 저장 값의 유효 범위 / Eclipse IDE 프로젝트 임포트 방법 ](#6월-4일-화)
+[6월 5일 (수) : 실습 프로젝트 준비 / 인텔리제이 설치 및 설정 ](#6월-5일-수)
 
 
 
 
-### 5월 27일 (월)
+## 5월 27일 (월)
 ##### Git 이란?
 형상관리 시스템 (Software Configuration Management) = 버전관리시스템 
 
@@ -98,7 +100,7 @@ Version = 변경에 대해 부여한 구분 번호 = (식별자)
 
 ***
 
-### 5월 28일 (화)
+## 5월 28일 (화)
 ##### 컴파일러, 인터프리터, 하이브리드 방식
 컴파일, 인터프리터, 하이브리드 방식은 프로그래밍 언어의 소스 코드를 기계어로 변환하여 실행하는 방법을 말함
 <br>
@@ -137,7 +139,7 @@ JAVA는 JAVA컴파일러에 의해 바이트 코드(중간 코드)로 컴파일 
 
 ***
 
-### 5월 29일 (수)
+## 5월 29일 (수)
 ##### JAVA 컴파일과 실행
 *컴파일
         javac 소스파일명 => Hello.class 파일 생성
@@ -257,7 +259,7 @@ vscode에서 소스 파일 저장(vscode는 UTF-8형식으로 문자를 저장�
 
 ***
 
-### 5월 30일 (목)
+## 5월 30일 (목)
 
 ##### Bytecode로 프로그래밍하기
 - hello world 출력하기
@@ -329,7 +331,7 @@ aaa bbb ccc가 애플리케이션 아규먼트
 
 ***
 
-### 5월 31일 (금)
+## 5월 31일 (금)
 
 ##### 패키지
 - package : 클래스를 분류(역할에 따라)하는 문법
@@ -475,7 +477,7 @@ public class Example {
 
 <br>
 
-### 6월-3일-월
+## 6월-3일-월
 
 ##### 윈도우와 유/리눅스의 엔터 구분
 * 윈도우: CR+LF (꼭 **한쌍**으로 와야 줄바꿈으로 인식)
@@ -615,3 +617,110 @@ EX) 똠똡똣 같은 언어
 - 정수는 2의 보수 규칙에 따라 2진수로 변환 -> 메모리에 저장
 - 부동소수점은 IEEE-754 규칙에 따라서 2진수로 변환 -> 메모리에 저장
 - 값을 2진수화가 가능하면 메모리에 저장할 수 있음
+
+
+## 6월 4일 (화)
+
+- 변수
+  - 데이터를 저장하는 메모리
+  - 변수 선언 = 메모리를 준비시키는 명령문
+  - 메모리타입(데이터타입) 메모리명(변수명);
+  - 메모리명 =(대입연산자) 값
+  
+- Data type
+  - Primitive(기본) Data Type
+    - 정수
+      - byte(1)
+      - short(2)
+      - int(4)
+      - long(8)
+    - 부동 소수점
+      - float(4)
+      - double(8)
+    - 논리
+      - boolean(4(int),1(byte))
+    - 문자
+      - char(2)  
+  - User Defined Data Type
+    - class
+
+
+- Data Type의 역할 - 메모리 사용을 제어
+  - int i; = 4byte 메모리 할당
+    - i =(2의보수) 30; 0x0000001E 
+  - float f; = 4byte 메모리 할당
+    - f =(IEEE-754) 30; 0x41E00000
+> 똑같은 값이여도 데이터 타입에 따라 메모리에 담기는 2진수 값이 다름 
+* whitespace
+  * space
+  * tab
+  * newline
+
+##### 이클립스에서 프로젝트 폴더 임포트하기
+File -> Import -> Existing Projects into Workspace
+프로젝트 폴더가 있지만 프로젝트 폴더라고 인식하지 못하는 경우 이클립스에서 인식하는 프로젝트 설정파일이 없어서 발생
+
+
+
+##### gradle로 이클립스 설정 파일 만들기
+ - .setting
+ - .project
+ - .classpath
+   - 위 3개의 파일이 있어야 이클립스가 프로젝트 폴더로 인식함
+
+1. build.gradle 파일에 해당 코드 넣기
+```
+plugins {
+    id 'eclipse' // Eclipse IDE 관련 작업을 수행할 수 있는 플러그인 추가
+}
+
+eclipse {
+    project {
+        name = "java-lang" // 프로젝트 이름을 지정하지 않으면 폴더 이름(예: app)을 사용
+    }
+    jdt {
+      sourceCompatibility = 21
+      targetCompatibility = 21
+      javaRuntimeName = "JavaSE-21"
+    }
+} 
+```
+
+2. gradle로 생성 = gradle eclipse 
+
+> gradle 명령어 오류 = 빌드 스크립트 파일(.gradle, .xml) 확인하기
+
+
+폴더 안에 빌드 스크립트 파일이 있으면 프로젝트 폴더
+
+git액션은 .git폴더(깃 백업 폴더)로 인해 작동되는 것 .git폴더가 사라지면 모든 깃 로그가 사라지고 보통 폴더가 됨
+
+자동 생성된 건 수동으로 수정하지 말고 다시 자동 생성하기. gradle cleanEclipse로 지우고 다시 gradle eclipse
+
+##### 메모리 크기와 값의 범위
+
+19bit 최대값 구하기 = 2^19 - 1 = 1111111111111111111
+2^19 / 2
+
+
+## 6월 5일 (수)
+
+ - 실습 프로젝트 준비
+   - myapp 프로젝트 생성
+   - a. 자바 프로젝트 준비
+     - [app-01/README.md](https://github.com/eomjinyoung/bitcamp-study/blob/main/myapp/app-01/README.md)
+     - 소스 코드 : 
+   - b. 리터럴과 변수를 사용해서 문자열 출력하기
+     - [app-02/README.md](https://github.com/eomjinyoung/bitcamp-study/tree/main/myapp/app-02/README.md)
+     - 소스 코드 :
+   - c. ANSI 이스케이프 코드를 사용하여 출력 문자열 꾸미기
+     - [app-03/README.md](https://github.com/eomjinyoung/bitcamp-study/blob/main/myapp/app-03/README.md)
+     - 소스 코드 :
+   - d. 키보드 입력 다루기
+     - [app-03/README.md](https://github.com/eomjinyoung/bitcamp-study/blob/main/myapp/app-04/README.md)   
+     - 소스 코드 :
+
+ - 개발 도구
+   - IntelliJ IDE 설치 및 설정 
+   - [파일 이름](https://github.com/계정명/저장소명/blob/브랜치명/경로/파일명)
+
