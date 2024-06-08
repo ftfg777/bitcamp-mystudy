@@ -62,7 +62,7 @@ public class App {
                     System.out.println(menu5);
                 }
 
-                if (menuNumber > 6 || menuNumber < 0 || menuNumber == 0) {
+                if (menuNumber > 6 || menuNumber <= 0) {
                     System.out.println("메뉴 번호가 옳지 않습니다.");
                 }
             } else {

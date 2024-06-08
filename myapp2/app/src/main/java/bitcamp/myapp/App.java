@@ -32,7 +32,7 @@ public class App {
         System.out.println(boldAnsi + line + resetAnsi);
 
         Scanner scanner = new Scanner(System.in);
-
+        
         while (true){
             System.out.print("> ");
             if (scanner.hasNextInt()){
