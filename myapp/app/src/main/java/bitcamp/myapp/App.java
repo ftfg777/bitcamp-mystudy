@@ -3,74 +3,74 @@
  */
 package bitcamp.myapp;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
 
     public static void main(String[] args) {
         String boldAnsi = "\033[1m";
-        String redAnsi = "\033[31m";
         String resetAnsi = "\033[0m";
-        String line = "--------------------------------------";
+        String redAnsi = "\033[31m";
+
+        String line = "----------------------------";
         String appTitle = "[팀 프로젝트 관리 시스템]";
-        String menu1 = "1. 회원";
-        String menu2 = "2. 팀";
-        String menu3 = "3. 프로젝트";
-        String menu4 = "4. 게시판";
-        String menu5 = "5. 도움말";
-        String menu6 = "6. 종료";
-        Scanner scanner = new Scanner(System.in);
+
+        String[] menus = new String[]{
+            "회원",
+            "팀",
+            "프로젝트",
+            "게시판",
+            "도움말",
+            "종료"
+        };
 
         System.out.println(boldAnsi + line + resetAnsi);
         System.out.println(boldAnsi + appTitle + resetAnsi + "\n");
-        System.out.println(menu1);
-        System.out.println(menu2);
-        System.out.println(menu3);
-        System.out.println(menu4);
-        System.out.println(menu5);
-        System.out.println(boldAnsi + redAnsi + menu6 + resetAnsi);
+
+        for (int i = 0; i < menus.length; i++) {
+            if ("종료".equals(menus[i])) {
+//                System.out.printf("%s%d. %s%s\n", (boldAnsi + redAnsi), (i + 1), menus[i],
+//                    resetAnsi);
+                System.out.println(boldAnsi + redAnsi + (i + 1) + ". " + menus[i] + resetAnsi);
+            } else {
+                System.out.println((i + 1) + ". " + menus[i]);
+
+            }
+
+        }
+//        System.out.println(menus[0]);
+//        System.out.println(menus[1]);
+//        System.out.println(menus[2]);
+//        System.out.println(menus[3]);
+//        System.out.println(menus[4]);
+//        System.out.println(boldAnsi + redAnsi + menus[5] + resetAnsi);
         System.out.println(boldAnsi + line + resetAnsi);
-        System.out.println("원하시는 메뉴 숫자를 입력해 주세요.");
+
+        Scanner scanner = new Scanner(System.in);
+
         while (true) {
             System.out.print("> ");
-            if (scanner.hasNextInt()) {
+            try {
+                int menuNum = scanner.nextInt();
 
-                int menuNumber = scanner.nextInt();
+                if (menuNum >= 1 && menuNum <= menus.length) { // 입력값이 1~6 범위일 때
+                    if ("종료".equals(menus[menuNum - 1])) {
+                        break;
+                    }
+                    System.out.println(menus[menuNum - 1]);
 
-                if (menuNumber == 6) {
-                    System.out.println("종료합니다.");
-                    scanner.close();
-                    break;
-                }
-                if (menuNumber == 1) {
-                    System.out.println(menu1);
-                }
-
-                if (menuNumber == 2) {
-                    System.out.println(menu2);
-                }
-
-                if (menuNumber == 3) {
-                    System.out.println(menu3);
-                }
-
-                if (menuNumber == 4) {
-                    System.out.println(menu4);
-                }
-
-                if (menuNumber == 5) {
-                    System.out.println(menu5);
-                }
-
-                if (menuNumber > 6 || menuNumber <= 0) {
+                } else {
                     System.out.println("메뉴 번호가 옳지 않습니다.");
                 }
-            } else {
-                System.out.println("숫자만 입력 가능합니다. 다시 입력해주세요.");
+
+            } catch (InputMismatchException e) {
+                System.out.println("유효한 입력이 아닙니다.");
                 scanner.next();
             }
 
         }
-
+        System.out.println("종료합니다");
+        scanner.close();
     }
 }
