@@ -1,13 +1,15 @@
 
-G	java:S106"+Replace this use of System.out by a logger.(œÓ¥¨8ïî„‹€2
-G	java:S106"+Replace this use of System.out by a logger.(àÇ¾Û8ïî„‹€2
-G	java:S106#"+Replace this use of System.out by a logger.(Æ¥ÔÛ8ïî„‹€2
-]	java:S125""<This block of commented-out lines of code should be removed.(¢†€ÿÿÿÿÿ8ïî„‹€2
-G	java:S106%"+Replace this use of System.out by a logger.(¯Ğ±Æ8ğî„‹€2
-G	java:S1060"+Replace this use of System.out by a logger.(œÓ¥¨8ğî„‹€2
-X	java:S125*"<This block of commented-out lines of code should be removed.(¾£ã©8ğî„‹€2
-L	java:S1065"+Replace this use of System.out by a logger.(›Äæ÷üÿÿÿÿ8ñî„‹€2
-G	java:S106="+Replace this use of System.out by a logger.(ë»¤¾8ñî„‹€2
-G	java:S106@"+Replace this use of System.out by a logger.(‡Ú¤Ã8ñî„‹€2
-G	java:S106D"+Replace this use of System.out by a logger.(ï¹”¿8òî„‹€2
-G	java:S106I"+Replace this use of System.out by a logger.(ÉÉª8òî„‹€2
+L	java:S106""+Replace this use of System.out by a logger.(ÿ”Ğûÿÿÿÿ8ª¦¹€2
+G	java:S106&"+Replace this use of System.out by a logger.(Ğóğ8ª¦¹€2
+L	java:S106*"+Replace this use of System.out by a logger.(‰×˜™ùÿÿÿÿ8ª¦¹€2
+L	java:S106-"+Replace this use of System.out by a logger.(ú˜ ®ûÿÿÿÿ8ª¦¹€2
+G	java:S106="+Replace this use of System.out by a logger.(œÓ¥¨8ª¦¹€2
+L	java:S106>"+Replace this use of System.out by a logger.(ËÂ±ˆúÿÿÿÿ8ª¦¹€2
+s
+java:S3457B"Q%n should be used in place of \n to produce the platform-specific line separator.(¯Ã¦ÿÿÿÿÿ8ª¦¹€2
+L	java:S106B"+Replace this use of System.out by a logger.(¯Ã¦ÿÿÿÿÿ8ª¦¹€2
+n
+java:S3457E"Q%n should be used in place of \n to produce the platform-specific line separator.(óı‡8ª¦¹€2
+G	java:S106E"+Replace this use of System.out by a logger.(óı‡8«¦¹€2
+G	java:S106H"+Replace this use of System.out by a logger.(œÓ¥¨8«¦¹€2
+L	java:S106T"+Replace this use of System.out by a logger.(›Äæ÷üÿÿÿÿ8«¦¹€2

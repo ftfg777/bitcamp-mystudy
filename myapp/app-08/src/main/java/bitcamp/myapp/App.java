@@ -1,12 +1,13 @@
 package bitcamp.myapp;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
 
     static Scanner keyboardScanner = new Scanner(System.in);
 
-    static String[] menus = new String[]{
+    static String[] menus = new String[] {
         "회원",
         "팀",
         "프로젝트",
@@ -17,7 +18,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        printMenu();
+        printMenu(); // 메서드에 묶인 코드를 실행하는 것을 "메서드를 호출(call)한다"라고 부른다.
 
         String command;
         while (true) {
@@ -26,10 +27,10 @@ public class App {
 
                 if (command.equals("menu")) {
                     printMenu();
+
                 } else {
                     int menuNo = Integer.parseInt(command);
-                    String menuTitle = getMenuTitle(menuNo);
-                    
+                    String menuTitle = getMenuTitle(menuNo); // 설명하는 변수
                     if (menuTitle == null) {
                         System.out.println("유효한 메뉴 번호가 아닙니다.");
                     } else if (menuTitle.equals("종료")) {
@@ -42,11 +43,9 @@ public class App {
                 System.out.println("숫자로 메뉴 번호를 입력하세요.");
             }
         }
+
         System.out.println("종료합니다.");
 
-        // 사용을 완료한 자원은 반환해야 다른 프로세스(프로그램)이 사용할 수 있다.
-        // 단, JVM을 종료하면 JVM이 사용한 모든 자원은 강제 회수된다.
-        // OS가 강제 회수한다.
         keyboardScanner.close();
     }
 
@@ -63,13 +62,18 @@ public class App {
 
         for (int i = 0; i < menus.length; i++) {
             if (menus[i].equals("종료")) {
-                System.out.printf("%s%d. %s%s\n", (boldAnsi + redAnsi), (i + 1), menus[i],
-                    resetAnsi);
+                System.out.printf("%s%d. %s%s\n", (boldAnsi + redAnsi), (i + 1), menus[i], resetAnsi);
             } else {
                 System.out.printf("%d. %s\n", (i + 1), menus[i]);
             }
         }
+
         System.out.println(boldAnsi + line + resetAnsi);
+    }
+
+    static String prompt() {
+        System.out.print("> ");
+        return keyboardScanner.nextLine();
     }
 
     static boolean isValidateMenu(int menuNo) {
@@ -77,11 +81,12 @@ public class App {
     }
 
     static String getMenuTitle(int menuNo) {
+//        if (isValidateMenu(menuNo)) {
+//            return menus[menuNo - 1];
+//        }
+//        return null;
+
         return isValidateMenu(menuNo) ? menus[menuNo - 1] : null;
     }
 
-    static String prompt() {
-        System.out.print("> ");
-        return keyboardScanner.nextLine();
-    }
 }
