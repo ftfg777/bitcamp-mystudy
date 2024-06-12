@@ -1,5 +1,6 @@
 package bitcamp.myapp;
 
+
 import java.util.Scanner;
 
 public class App {
@@ -16,7 +17,6 @@ public class App {
     };
 
     public static void main(String[] args) {
-
         printMenu();
 
         String command;
@@ -29,7 +29,7 @@ public class App {
                 } else {
                     int menuNo = Integer.parseInt(command);
                     String menuTitle = getMenuTitle(menuNo);
-                    
+
                     if (menuTitle == null) {
                         System.out.println("유효한 메뉴 번호가 아닙니다.");
                     } else if (menuTitle.equals("종료")) {
@@ -42,11 +42,9 @@ public class App {
                 System.out.println("숫자로 메뉴 번호를 입력하세요.");
             }
         }
+
         System.out.println("종료합니다.");
 
-        // 사용을 완료한 자원은 반환해야 다른 프로세스(프로그램)이 사용할 수 있다.
-        // 단, JVM을 종료하면 JVM이 사용한 모든 자원은 강제 회수된다.
-        // OS가 강제 회수한다.
         keyboardScanner.close();
     }
 
@@ -72,16 +70,16 @@ public class App {
         System.out.println(boldAnsi + line + resetAnsi);
     }
 
+    static String prompt() {
+        System.out.print("> ");
+        return keyboardScanner.nextLine();
+    }
+
     static boolean isValidateMenu(int menuNo) {
         return menuNo >= 1 && menuNo <= menus.length;
     }
 
     static String getMenuTitle(int menuNo) {
         return isValidateMenu(menuNo) ? menus[menuNo - 1] : null;
-    }
-
-    static String prompt() {
-        System.out.print("> ");
-        return keyboardScanner.nextLine();
     }
 }
