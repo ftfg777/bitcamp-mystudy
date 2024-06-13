@@ -1,15 +1,27 @@
 
-r	java:S106""+Replace this use of System.out by a logger.(ÿ”Ğûÿÿÿÿ8ÎÇœÛ€2J$339a8251-cdd8-4e28-bb92-425e08901f12
-m	java:S106&"+Replace this use of System.out by a logger.(Ğóğ8ÏÇœÛ€2J$3fc8e24d-5fbc-4cb8-bb1a-673e52661042
-r	java:S106*"+Replace this use of System.out by a logger.(‰×˜™ùÿÿÿÿ8ÏÇœÛ€2J$ca11a358-74a5-4c05-84c6-5d8e074f2927
-r	java:S106."+Replace this use of System.out by a logger.(ú˜ ®ûÿÿÿÿ8ÏÇœÛ€2J$b9cfaf01-724a-4160-af13-6a1bd2a64da4
-m	java:S106;"+Replace this use of System.out by a logger.(œÓ¥¨8ÏÇœÛ€2J$6e522cd9-6259-4b73-a1f9-10246fa8cdcc
-r	java:S106<"+Replace this use of System.out by a logger.(ËÂ±ˆúÿÿÿÿ8ÏÇœÛ€2J$7289c507-9299-41f4-ac16-f10c33fbf724
-™
-java:S3457@"Q%n should be used in place of \n to produce the platform-specific line separator.(¯Ã¦ÿÿÿÿÿ8ÏÇœÛ€2J$654e9a87-1a5a-45fa-8dbf-73c97a7a0925
-r	java:S106@"+Replace this use of System.out by a logger.(¯Ã¦ÿÿÿÿÿ8ÏÇœÛ€2J$56ebe8e5-d2fa-47b2-8362-2429c1c8b807
+ 	java:S135n"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8ÂˆŠ‹2J$3725ebc2-0a9c-4367-af7e-4b2d42de472b
+r	java:S106#"+Replace this use of System.out by a logger.(ÿ”Ğûÿÿÿÿ8©§‰‹2J$912d7485-c26e-4aad-935c-256730c078a6
+m	java:S106*"+Replace this use of System.out by a logger.(Ğóğ8ÉˆŠ‹2J$749ae455-6e20-4b12-910b-b4bb00b665f8
+r	java:S1060"+Replace this use of System.out by a logger.(‰×˜™ùÿÿÿÿ8ÉˆŠ‹2J$9d6efc4a-f3a9-4e7f-8f06-5bcff5b9227a
+r	java:S1064"+Replace this use of System.out by a logger.(ú˜ ®ûÿÿÿÿ8ÉˆŠ‹2J$8339632b-d0cc-4e18-82bb-6d9f05416f3a
+m	java:S106A"+Replace this use of System.out by a logger.(œÓ¥¨8ÉˆŠ‹2J$a0fbdb04-f10e-45e1-8bdb-3c2ffa14a3f3
+r	java:S106B"+Replace this use of System.out by a logger.(ËÂ±ˆúÿÿÿÿ8ÉˆŠ‹2J$77881918-6ecb-4ac6-832a-0ca063cc2054
 ”
-java:S3457C"Q%n should be used in place of \n to produce the platform-specific line separator.(óı‡8ÏÇœÛ€2J$a3c2b038-10db-4dbd-bb32-7dda2ded0fa6
-m	java:S106C"+Replace this use of System.out by a logger.(óı‡8ÏÇœÛ€2J$676c9db6-31a6-4372-b3f1-20b5800c2d16
-m	java:S106F"+Replace this use of System.out by a logger.(œÓ¥¨8ÏÇœÛ€2J$45a9f9f1-ed8e-4cbe-81c8-729632e2db66
-r	java:S106J"+Replace this use of System.out by a logger.(›Äæ÷üÿÿÿÿ8‰ÌÛ€2J$e387b283-33c7-4546-8685-5196843d23dc
+java:S3457F"Q%n should be used in place of \n to produce the platform-specific line separator.(ºŒèå8ÉˆŠ‹2J$09f4a94c-2542-403a-ad5e-f652374e8eb3
+m	java:S106F"+Replace this use of System.out by a logger.(ºŒèå8ÉˆŠ‹2J$2936f99c-4b53-4a68-b2d4-4a0c085ff114
+”
+java:S3457I"Q%n should be used in place of \n to produce the platform-specific line separator.(ª±à½8ÊˆŠ‹2J$fbc6b41c-355c-4e07-a32c-5b2339984188
+m	java:S106I"+Replace this use of System.out by a logger.(ª±à½8ÊˆŠ‹2J$6fd80569-c885-4010-98ad-de2f78fc0fc3
+m	java:S106M"+Replace this use of System.out by a logger.(œÓ¥¨8ÊˆŠ‹2J$93e2d80a-2ff4-4a8c-94c1-efd6e981d799
+™
+java:S3457Q"Q%n should be used in place of \n to produce the platform-specific line separator.(üæ°øıÿÿÿÿ8ÊˆŠ‹2J$578af938-d257-41cd-a821-645fab0b923e
+r	java:S106Q"+Replace this use of System.out by a logger.(üæ°øıÿÿÿÿ8ÊˆŠ‹2J$3e9e3409-08d8-4bc7-b6ae-db8afe3cee8c
+”
+java:S3457S"Q%n should be used in place of \n to produce the platform-specific line separator.(óı‡8ËˆŠ‹2J$639e8e07-3154-4aa3-a780-044bc384f18f
+m	java:S106S"+Replace this use of System.out by a logger.(óı‡8ËˆŠ‹2J$9f1aea42-406a-49ef-9bf9-395caaf42a76
+m	java:S106U"+Replace this use of System.out by a logger.(ñÊ§§8ËˆŠ‹2J$6e5719b9-dc89-402a-86ad-c53baaad2aba
+m	java:S106Y"+Replace this use of System.out by a logger.(ÚŒ©Á8ËˆŠ‹2J$fe9d7bbc-8db2-4353-8bb9-f4cd4ce14464
+~	java:S125b"<This block of commented-out lines of code should be removed.(ê»¹‡8ÌˆŠ‹2J$90b4a351-7c00-4c12-bfaf-c285e71a0081
+r	java:S106{"+Replace this use of System.out by a logger.(ÿ”Ğûÿÿÿÿ8ÍˆŠ‹2J$597380ec-5ebe-445d-bf41-be612b65c72f
+m	java:S106}"+Replace this use of System.out by a logger.(îáÉ8ÍˆŠ‹2J$18d745b8-6136-490f-b24f-4320a472604f
+s	java:S106€"+Replace this use of System.out by a logger.(‰×˜™ùÿÿÿÿ8ÍˆŠ‹2J$52da5885-12a3-477c-886c-6aae9929d527
