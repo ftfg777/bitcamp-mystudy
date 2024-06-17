@@ -9,3 +9,17 @@ K
 +app-07/src/main/java/bitcamp/myapp/App.java,6/e/6e998ee6f0a33d7773514ae75362bf43e49758fb
 [
 +app-08/src/main/java/bitcamp/myapp/App.java,5/f/5fc3f989682a976a6a2a4c9744b21d9505e58bda
+Z
+*app/src/main/java/bitcamp/myapp/App02.java,8/a/8a3aa108f5b4e56bccab7759700be7952f270dac
+Z
+*app/src/main/java/bitcamp/myapp/App03.java,9/8/988185e5d86db4c137e5733859e34de837793875
+Z
+*app/src/main/java/bitcamp/myapp/App04.java,4/1/41339c12e5b1393b20ca213b602e1f1b37661072
+`
+0app/src/main/java/bitcamp/myapp/UserCommand.java,e/f/ef68ebbbefffe75fcc93bd15888fbd2c69253538
+[
++app/src/main/java/bitcamp/myapp/Prompt.java,b/6/b673860bae03b806e5c128cde8a701a3bd144cfa
+Y
+)app/src/main/java/bitcamp/myapp/User.java,7/2/72e0461d3ec45d0a8fbae63293adb737e46d7e20
+Y
+)app/src/main/java/bitcamp/myapp/Team.java,6/6/66b7a415d591f1bcbcb2a21d34fd3ce1439d37b1

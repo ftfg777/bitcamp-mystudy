@@ -1,0 +1,29 @@
+
+–
+java:S11928"NDefine a constant instead of duplicating this literal "íšŒì›ë²ˆí˜¸?" 3 times.(´„Ë¥úÿÿÿÿ8èÈó´2J$13ab9191-52d8-4896-aa4c-2d17feebdbd7
+š
+java:S1192:"WDefine a constant instead of duplicating this literal "ì—†ëŠ” íšŒì›ì…ë‹ˆë‹¤" 3 times.(àÑ ¡8èÈó´2J$5a9bcc22-d0fb-43bc-b95a-a121eecac920
+‚
+java:S1118":Add a private constructor to hide the implicit public one.(éİ†øùÿÿÿÿ8êÈó´2J$134e82f8-661a-43fb-aab3-e2119266b3bc
+”
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ç–à‡8ëÈó´2J$bb78a907-27f1-4935-b523-1a8b8590e24f
+m	java:S106"+Replace this use of System.out by a logger.(ç–à‡8ëÈó´2J$cd4bae33-5ff9-4ab2-a46c-3843f557fa46
+i	java:S131""Add a default case to this switch.(¸ìù«üÿÿÿÿ8ìÈó´2J$2c95f55e-49a1-42ad-a305-979c95eb9201
+m	java:S106/"+Replace this use of System.out by a logger.(›ä˜Æ8íÈó´2J$37c92ad9-d4d8-4bc3-8b88-e0bc7967cc8c
+™
+java:S34573"Q%n should be used in place of \n to produce the platform-specific line separator.(¥áï´ÿÿÿÿÿ8íÈó´2J$51da53d1-6df1-4c14-8b39-cdea7a2f6543
+r	java:S1063"+Replace this use of System.out by a logger.(¥áï´ÿÿÿÿÿ8íÈó´2J$b0960512-0f0a-4665-81d2-52ba56866ced
+m	java:S106:"+Replace this use of System.out by a logger.(àÑ ¡8íÈó´2J$c77b158e-3be9-4abb-943d-2aa9766f95dd
+™
+java:S3457>"Q%n should be used in place of \n to produce the platform-specific line separator.(²•Ûîúÿÿÿÿ8íÈó´2J$61eab367-1920-47db-ba6c-3a728d8fe003
+r	java:S106>"+Replace this use of System.out by a logger.(²•Ûîúÿÿÿÿ8íÈó´2J$b3fa5b01-5b17-4f7a-935f-3db32f2d1316
+™
+java:S3457?"Q%n should be used in place of \n to produce the platform-specific line separator.(Èîüûÿÿÿÿ8îÈó´2J$624cac08-9570-41f6-8efb-af462c59a1fa
+r	java:S106?"+Replace this use of System.out by a logger.(Èîüûÿÿÿÿ8îÈó´2J$35a8f322-e3be-4d56-abd0-247458a8cc60
+”
+java:S3457@"Q%n should be used in place of \n to produce the platform-specific line separator.(œ£®8îÈó´2J$e65204b4-8144-40a1-a8cf-c6b08ee5f7fe
+m	java:S106@"+Replace this use of System.out by a logger.(œ£®8îÈó´2J$4371b02f-9518-4409-b1ea-adea7ee82f60
+m	java:S106H"+Replace this use of System.out by a logger.(àÑ ¡8îÈó´2J$00ba6d2a-a46f-4c84-9660-dec2b11c99e7
+r	java:S106Q"+Replace this use of System.out by a logger.(î›ÿéşÿÿÿÿ8îÈó´2J$1c8855e1-07eb-4084-8bc5-1b8f86b92729
+m	java:S106W"+Replace this use of System.out by a logger.(àÑ ¡8ïÈó´2J$291c377b-734b-463e-be23-535f48cc278c
+r	java:S106`"+Replace this use of System.out by a logger.(è¸°¸úÿÿÿÿ8ïÈó´2J$adf8ed58-872c-48fc-8258-2e5c573248aa

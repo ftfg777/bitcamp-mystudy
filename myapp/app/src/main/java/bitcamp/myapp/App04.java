@@ -1,11 +1,11 @@
 package bitcamp.myapp;
 
-import static bitcamp.myapp.Prompt.input;
-import static bitcamp.myapp.UserCommand.executeUserCommand;
-import static bitcamp.myapp.UserCommand.getOneUser;
+import java.util.Scanner;
 
-public class App {
+public class App04 {
 
+    static final int MAX_SIZE = 100;
+    static Scanner keyboardScanner = new Scanner(System.in);
     static String[] mainMenus = new String[]{"회원", "팀", "프로젝트", "게시판", "도움말", "종료"};
     static String[][] subMenus = {
         {"등록", "목록", "조회", "변경", "삭제"},
@@ -13,6 +13,11 @@ public class App {
         {"등록", "목록", "조회", "변경", "삭제"},
         {"등록", "목록", "조회", "변경", "삭제"}
     };
+    static String[] name = new String[MAX_SIZE];
+    static String[] email = new String[MAX_SIZE];
+    static String[] password = new String[MAX_SIZE];
+    static String[] tel = new String[MAX_SIZE];
+    static int memberLength = 0;
 
     public static void main(String[] args) {
 
@@ -21,7 +26,7 @@ public class App {
         String command;
         while (true) {
             try {
-                command = Prompt.input("메인>");
+                command = prompt("메인>");
 
                 if (command.equals("menu")) {
                     printMenu();
@@ -49,7 +54,7 @@ public class App {
 
         System.out.println("종료합니다.");
 
-        Prompt.close();
+        keyboardScanner.close();
     }
 
     static void printMenu() {
@@ -83,6 +88,11 @@ public class App {
         System.out.println("9. 이전");
     }
 
+    static String prompt(String title) {
+        System.out.printf("%s ", title);
+        return keyboardScanner.nextLine();
+    }
+
     static boolean isValidateMenu(int menuNo, String[] menus) {
         return menuNo >= 1 && menuNo <= menus.length;
     }
@@ -96,7 +106,7 @@ public class App {
         printSubMenu(menuTitle, menus);
 
         while (true) {
-            String command = Prompt.input(String.format("메인/%s>", menuTitle));
+            String command = prompt(String.format("메인/%s>", menuTitle));
             if (command.equals("menu")) {
                 printSubMenu(menuTitle, menus);
                 continue;
@@ -136,78 +146,97 @@ public class App {
         }
     }
 
-
-    static void executeTeamCommand(String command) {
+    static void executeUserCommand(String command) {
         System.out.printf("[%s]\n", command);
         switch (command) {
             case "등록":
-                addTeam();
-                break;
-            case "목록":
-                listTeam();
+                addUser();
                 break;
             case "조회":
-                viewTeam();
+                viewUser();
+                break;
+            case "목록":
+                listUser();
                 break;
             case "변경":
-                updateTeam();
+                updateUser();
                 break;
             case "삭제":
-                deleteTeam();
+                deleteUser();
                 break;
-
-        }
-    }
-
-    static void deleteTeam() {
-    }
-
-    static void updateTeam() {
-    }
-
-    static void viewTeam() {
-    }
-
-    static void listTeam() {
-    }
-
-    static void addTeam() {
-        Team team = new Team();
-        team.teamName = input("팀명?");
-
-        int userNo;
-        String username;
-        int userCount = 0;
-
-        while (true) {
-            try {
-                userNo = Integer.parseInt(input("추가할 팀원 번호?(종료: 0)"));
-                if (userNo == 0) {
-                    System.out.println("등록 했습니다.");
-                    break;
-                }
-                User user = getOneUser(userNo);
-                User teamUser = team.users[userNo];
-
-                if (user == null) {
-                    System.out.println("없는 팀원입니다.");
-                }
-
-                if (teamUser == user) {
-                    System.out.printf("'%s은 현재 팀원입니다.\n'", user.name);
-                } else {
-                    team.users[userCount++] = user;
-                    System.out.printf("'%s'을 추가했습니다.\n", user.name);
-                }
-
-
-            } catch (NullPointerException e) {
-                System.out.println("없는 팀원입니다 null.");
-            }
-
-
         }
 
+    }
+
+    static void addUser() {
+        name[memberLength] = prompt("이름?");
+        email[memberLength] = prompt("이메일?");
+        password[memberLength] = prompt("암호?");
+        tel[memberLength] = prompt("연락처?");
+        memberLength++;
+    }
+
+
+    static void listUser() {
+        System.out.println("번호 이름 이메일");
+
+        for (int i = 0; i < memberLength; i++) {
+            System.out.printf("%d %s %s\n", (i + 1), name[i], email[i]);
+        }
+
+    }
+
+    static void viewUser() {
+        int userNo = Integer.parseInt(prompt("회원번호?"));
+        if (userNo < 1 || userNo > memberLength) {
+            System.out.println("없는 회원입니다");
+            return;
+        }
+        System.out.printf("이름: %s\n", name[userNo - 1]);
+        System.out.printf("이메일: %s\n", email[userNo - 1]);
+        System.out.printf("연락처: %s\n", tel[userNo - 1]);
+
+    }
+
+    static void updateUser() {
+
+        int userNo = Integer.parseInt(prompt("회원번호?"));
+        if (userNo < 1 || userNo > memberLength) {
+            System.out.println("없는 회원입니다");
+            return;
+        }
+        name[userNo - 1] = prompt(String.format("이름(%s)?", name[userNo - 1]));
+        email[userNo - 1] = prompt(String.format("이메일(%s)?", email[userNo - 1]));
+        password[userNo - 1] = prompt("암호는?");
+        tel[userNo - 1] = prompt(String.format("연락처(%s)?", tel[userNo - 1]));
+
+        System.out.println("변경했습니다.");
+
+    }
+
+    static void deleteUser() {
+        int userNo = Integer.parseInt(prompt("회원번호?"));
+        if (userNo < 1 || userNo > memberLength) {
+            System.out.println("없는 회원입니다");
+            return;
+        }
+        // 다음 값을 앞으로 당긴다
+        for (int i = userNo; i < memberLength; i++) {
+            name[i - 1] = name[i];
+            password[i - 1] = password[i];
+            email[i - 1] = email[i];
+            tel[i - 1] = tel[i];
+        }
+        memberLength--;
+        name[memberLength] = null;
+        password[memberLength] = null;
+        email[memberLength] = null;
+        tel[memberLength] = null;
+
+    }
+
+    static void executeTeamCommand(String command) {
+        System.out.printf("팀 %s\n", command);
     }
 
     static void executeProjectCommand(String command) {
