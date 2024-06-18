@@ -14,20 +14,20 @@ public class Test01 {
 
     // 계산 결과를 담을 변수를 준비한다.
 
+
     // 메서드를 호출하여 작업을 수행하고,
     // 리턴 결과는 로컬 변수에 저장한다.
-    Calculator c = new Calculator();
 
-    c.plus(3);
-    c.minus(1);
-    c.multiple(7);
-    c.divide(3);
+    Calculator c1 = new Calculator();
 
-    System.out.printf("result = %d\n", c.getResult());
-    c.clear();
-    c.plus(3);
-    System.out.printf("result = %d\n", c.getResult());
+    c1.plus(2);
+    c1.minus(3);
+    c1.multiple(7);
+    c1.divide(3);
+
+    System.out.printf("result = %d\n", c1.getResult());
   }
+
 
 
 

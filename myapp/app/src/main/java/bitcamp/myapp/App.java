@@ -1,12 +1,14 @@
 package bitcamp.myapp;
 
-import static bitcamp.myapp.Prompt.input;
-import static bitcamp.myapp.UserCommand.executeUserCommand;
-import static bitcamp.myapp.UserCommand.getOneUser;
+import static bitcamp.myapp.command.BoardCommand.executeBoardCommand;
+import static bitcamp.myapp.command.ProjectCommand.executeProjectCommand;
+import static bitcamp.myapp.command.UserCommand.executeUserCommand;
+
+import bitcamp.myapp.util.Prompt;
 
 public class App {
 
-    static String[] mainMenus = new String[]{"회원", "팀", "프로젝트", "게시판", "도움말", "종료"};
+    static String[] mainMenus = new String[]{"회원", "프로젝트", "게시판", "도움말", "종료"};
     static String[][] subMenus = {
         {"등록", "목록", "조회", "변경", "삭제"},
         {"등록", "목록", "조회", "변경", "삭제"},
@@ -34,7 +36,7 @@ public class App {
                     } else if (menuTitle.equals("종료")) {
                         break;
                     } else {
-                        if (menuNo >= 1 && menuNo <= 4) {
+                        if (menuNo >= 1 && menuNo <= 3) {
                             processMenu(menuTitle, subMenus[menuNo - 1]);
                         } else {
                             System.out.println(menuTitle);
@@ -57,7 +59,7 @@ public class App {
         String redAnsi = "\033[31m";
         String resetAnsi = "\033[0m";
 
-        String appTitle = "[팀 프로젝트 관리 시스템]";
+        String appTitle = "[프로젝트 관리 시스템]";
         String line = "----------------------------------";
 
         System.out.println(boldAnsi + line + resetAnsi);
@@ -113,21 +115,15 @@ public class App {
                         case "회원":
                             executeUserCommand(subMenuTitle);
                             break;
-                        case "팀":
-                            executeTeamCommand(subMenuTitle);
-                            break;
                         case "프로젝트":
                             executeProjectCommand(subMenuTitle);
                             break;
                         case "게시판":
                             executeBoardCommand(subMenuTitle);
                             break;
-
                         default:
                             System.out.printf("%s 메뉴의 명령을 처리할 수 없습니다.\n", menuTitle);
-
                     }
-
                 }
 
             } catch (NumberFormatException e) {
@@ -136,86 +132,5 @@ public class App {
         }
     }
 
-
-    static void executeTeamCommand(String command) {
-        System.out.printf("[%s]\n", command);
-        switch (command) {
-            case "등록":
-                addTeam();
-                break;
-            case "목록":
-                listTeam();
-                break;
-            case "조회":
-                viewTeam();
-                break;
-            case "변경":
-                updateTeam();
-                break;
-            case "삭제":
-                deleteTeam();
-                break;
-
-        }
-    }
-
-    static void deleteTeam() {
-    }
-
-    static void updateTeam() {
-    }
-
-    static void viewTeam() {
-    }
-
-    static void listTeam() {
-    }
-
-    static void addTeam() {
-        Team team = new Team();
-        team.teamName = input("팀명?");
-
-        int userNo;
-        String username;
-        int userCount = 0;
-
-        while (true) {
-            try {
-                userNo = Integer.parseInt(input("추가할 팀원 번호?(종료: 0)"));
-                if (userNo == 0) {
-                    System.out.println("등록 했습니다.");
-                    break;
-                }
-                User user = getOneUser(userNo);
-                User teamUser = team.users[userNo];
-
-                if (user == null) {
-                    System.out.println("없는 팀원입니다.");
-                }
-
-                if (teamUser == user) {
-                    System.out.printf("'%s은 현재 팀원입니다.\n'", user.name);
-                } else {
-                    team.users[userCount++] = user;
-                    System.out.printf("'%s'을 추가했습니다.\n", user.name);
-                }
-
-
-            } catch (NullPointerException e) {
-                System.out.println("없는 팀원입니다 null.");
-            }
-
-
-        }
-
-    }
-
-    static void executeProjectCommand(String command) {
-        System.out.printf("프로젝트 %s\n", command);
-    }
-
-    static void executeBoardCommand(String command) {
-        System.out.printf("게시판 %s\n", command);
-    }
 
 }

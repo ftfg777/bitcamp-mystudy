@@ -1,16 +1,19 @@
-package bitcamp.myapp;
+package bitcamp.myapp.command;
 
 
-import static bitcamp.myapp.Prompt.input;
+import static bitcamp.myapp.util.Prompt.input;
+import static bitcamp.myapp.util.Prompt.inputInt;
+
+import bitcamp.myapp.vo.User;
 
 public class UserCommand {
 
-    static final int MAX_SIZE = 100;
-    static User[] users = new User[MAX_SIZE];
-    static int userLength = 0;
+    private static final int MAX_SIZE = 100;
+    private static User[] users = new User[MAX_SIZE];
+    private static int userLength = 0;
 
 
-    static void executeUserCommand(String command) {
+    public static void executeUserCommand(String command) {
         System.out.printf("[%s]\n", command);
         switch (command) {
             case "등록":
@@ -32,57 +35,60 @@ public class UserCommand {
 
     }
 
-    static void addUser() {
+    private static void addUser() {
         User user = new User();
-        user.name = input("이름?");
-        user.email = input("이메일?");
-        user.password = input("암호?");
-        user.tel = input("연락처?");
+        user.setName(input("이름?"));
+        user.setEmail(input("이메일?"));
+        user.setPassword(input("암호?"));
+        user.setTel(input("연락처?"));
 
         users[userLength++] = user;
+        System.out.println("등록됐습니다.");
     }
 
 
-    static void listUser() {
+    private static void listUser() {
         System.out.println("번호 이름 이메일");
 
         for (int i = 0; i < userLength; i++) {
             User user = users[i];
-            System.out.printf("%d %s %s\n", (i + 1), user.name, user.email);
+            System.out.printf("%d %s %s\n", (i + 1), user.getName(), user.getEmail());
         }
     }
 
-    static void viewUser() {
-        int userNo = Integer.parseInt(input("회원번호?"));
+
+    private static void viewUser() {
+        int userNo = inputInt("회원번호?");
         if (userNo < 1 || userNo > userLength) {
             System.out.println("없는 회원입니다");
             return;
         }
         User user = users[userNo - 1];
-        System.out.printf("이름: %s\n", user.name);
-        System.out.printf("이메일: %s\n", user.email);
-        System.out.printf("연락처: %s\n", user.tel);
+        System.out.printf("이름: %s\n", user.getName());
+        System.out.printf("이메일: %s\n", user.getEmail());
+        System.out.printf("연락처: %s\n", user.getTel());
 
     }
 
-    static void updateUser() {
 
-        int userNo = Integer.parseInt(input("회원번호?"));
+    private static void updateUser() {
+
+        int userNo = inputInt("회원번호?");
         if (userNo < 1 || userNo > userLength) {
             System.out.println("없는 회원입니다");
             return;
         }
         User user = users[userNo - 1];
-        user.name = input(String.format("이름(%s)?", user.name));
-        user.email = input(String.format("이메일(%s)?", user.email));
-        user.password = input("암호는?");
-        user.tel = input(String.format("연락처(%s)?", user.tel));
+        user.setName(input("이름(%s)?", user.getName()));
+        user.setEmail(input("이메일(%s)?", user.getEmail()));
+        user.setPassword(input("암호는?"));
+        user.setTel(input("연락처(%s)?", user.getTel()));
 
         System.out.println("변경했습니다.");
     }
 
-    static void deleteUser() {
-        int userNo = Integer.parseInt(input("회원번호?"));
+    private static void deleteUser() {
+        int userNo = inputInt("회원번호?");
         if (userNo < 1 || userNo > userLength) {
             System.out.println("없는 회원입니다");
             return;
@@ -97,12 +103,10 @@ public class UserCommand {
     }
 
 
-    static User getOneUser(int userNo) {
-        if (users[userNo - 1] != null) {
-            return users[userNo - 1];
-        } else {
+    public static User findByNo(int userNo) {
+        if (userNo < 1 || userNo > userLength) {
             return null;
         }
+        return users[userNo - 1];
     }
-
 }
