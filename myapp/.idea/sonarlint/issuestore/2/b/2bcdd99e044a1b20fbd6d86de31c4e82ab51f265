@@ -1,27 +1,27 @@
 
- 	java:S135d"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8¾µÉ‚2J$d5dd0462-e00b-4e5b-9b96-5513d742a09a
-r	java:S106#"+Replace this use of System.out by a logger.(ÿ”Ğûÿÿÿÿ8ÀµÉ‚2J$2c0bf542-4e0a-44f9-81dd-03e8fa97fed1
-m	java:S106*"+Replace this use of System.out by a logger.(Ğóğ8ÀµÉ‚2J$546fd1f9-1c8b-46ca-abfe-c2733e96930d
-r	java:S1060"+Replace this use of System.out by a logger.(‰×˜™ùÿÿÿÿ8ÀµÉ‚2J$be9f2fef-bacf-4fb6-8e8d-7968bb0ecb63
-r	java:S1064"+Replace this use of System.out by a logger.(ú˜ ®ûÿÿÿÿ8ÀµÉ‚2J$43cd6fda-e443-4124-a621-ebe206d469e8
-m	java:S106A"+Replace this use of System.out by a logger.(œÓ¥¨8ÀµÉ‚2J$4aeb18a7-77de-4a2c-803f-ff58f7c97a13
-r	java:S106B"+Replace this use of System.out by a logger.(ËÂ±ˆúÿÿÿÿ8ÁµÉ‚2J$95ab63e7-7365-4fe1-8cad-93f7c91e10c8
+ 	java:S135c"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8¾µÉ‚2J$aa2fde1c-6d85-4c38-8308-5eda90cfc940
+r	java:S106""+Replace this use of System.out by a logger.(ÿ”Ğûÿÿÿÿ8ÀµÉ‚2J$c7bd8e5c-ee87-429e-9639-6ea14606f10d
+m	java:S106)"+Replace this use of System.out by a logger.(Ğóğ8ÀµÉ‚2J$98e13a0c-a7c6-4536-b80a-eb411525672f
+r	java:S106/"+Replace this use of System.out by a logger.(‰×˜™ùÿÿÿÿ8ÀµÉ‚2J$4f32c50c-b20e-42f7-a5f9-a63d79f04aab
+r	java:S1063"+Replace this use of System.out by a logger.(ú˜ ®ûÿÿÿÿ8ÀµÉ‚2J$c5443029-6636-4c23-836f-022f6d2eb211
+m	java:S106@"+Replace this use of System.out by a logger.(œÓ¥¨8ÀµÉ‚2J$94717a41-e9b7-4d94-a6d5-05e48cdf2365
+r	java:S106A"+Replace this use of System.out by a logger.(ËÂ±ˆúÿÿÿÿ8ÁµÉ‚2J$f5a3ffd6-7fc6-4a03-a6e8-fa0f4c3ba8ea
 ”
-java:S3457F"Q%n should be used in place of \n to produce the platform-specific line separator.(ºŒèå8ÁµÉ‚2J$e98afee3-991e-470d-8e75-41319b16e6e5
-m	java:S106F"+Replace this use of System.out by a logger.(ºŒèå8ÁµÉ‚2J$690b461f-e496-4f5d-a99c-607a0285246f
+java:S3457E"Q%n should be used in place of \n to produce the platform-specific line separator.(ºŒèå8ÁµÉ‚2J$79dc3312-eacf-4ce9-9337-7c21b3a88868
+m	java:S106E"+Replace this use of System.out by a logger.(ºŒèå8ÁµÉ‚2J$1daef82c-7169-4f4c-bbb2-f442ee51de0d
 ”
-java:S3457I"Q%n should be used in place of \n to produce the platform-specific line separator.(ª±à½8ÁµÉ‚2J$cec402f9-3618-415a-8617-3758affe2885
-m	java:S106I"+Replace this use of System.out by a logger.(ª±à½8ÁµÉ‚2J$98376faf-c9b6-46fd-9bed-7ddc02cab584
-m	java:S106M"+Replace this use of System.out by a logger.(œÓ¥¨8ÁµÉ‚2J$18aced2d-cf62-49ff-bce3-1d85b428ea11
+java:S3457H"Q%n should be used in place of \n to produce the platform-specific line separator.(ª±à½8ÁµÉ‚2J$121c2ac4-5ff0-4372-9a13-794fcc39f3b4
+m	java:S106H"+Replace this use of System.out by a logger.(ª±à½8ÁµÉ‚2J$14d3e39c-f7cf-4e20-9780-ea08688c7934
+m	java:S106L"+Replace this use of System.out by a logger.(œÓ¥¨8ÁµÉ‚2J$fb5e4d09-1168-40a3-a44c-09cf7b2bbae3
 ™
-java:S3457Q"Q%n should be used in place of \n to produce the platform-specific line separator.(üæ°øıÿÿÿÿ8ÁµÉ‚2J$521f343a-5899-4527-a63c-a369f23c9de8
-r	java:S106Q"+Replace this use of System.out by a logger.(üæ°øıÿÿÿÿ8ÁµÉ‚2J$6c231e83-f8da-446e-ab59-b8b049feaf37
+java:S3457P"Q%n should be used in place of \n to produce the platform-specific line separator.(üæ°øıÿÿÿÿ8ÁµÉ‚2J$20cac0a9-310e-4a5f-a165-434800448f3e
+r	java:S106P"+Replace this use of System.out by a logger.(üæ°øıÿÿÿÿ8ÁµÉ‚2J$f7a580d3-67ca-42b5-8393-ea906bb77a7b
 ”
-java:S3457S"Q%n should be used in place of \n to produce the platform-specific line separator.(óı‡8ÁµÉ‚2J$4bbe47ed-1690-44a2-917a-06ca88fd1c7a
-m	java:S106S"+Replace this use of System.out by a logger.(óı‡8ÁµÉ‚2J$30f5238a-90de-46ba-ad1b-135e57a7f883
-m	java:S106U"+Replace this use of System.out by a logger.(ñÊ§§8ÁµÉ‚2J$1c203c29-55ab-4885-a303-8316daf38de3
-r	java:S106p"+Replace this use of System.out by a logger.(ÿ”Ğûÿÿÿÿ8ÂµÉ‚2J$e1641ed3-e1dc-4741-86d0-85993a1f1cda
+java:S3457R"Q%n should be used in place of \n to produce the platform-specific line separator.(óı‡8ÁµÉ‚2J$0bd4318e-671f-42ce-a866-e224131eb1e4
+m	java:S106R"+Replace this use of System.out by a logger.(óı‡8ÁµÉ‚2J$38016060-2c8d-4afc-a7ad-03e761ad9892
+m	java:S106T"+Replace this use of System.out by a logger.(ñÊ§§8ÁµÉ‚2J$0772fe55-ab55-4fb3-b3e1-d9b0d6227891
+r	java:S106o"+Replace this use of System.out by a logger.(ÿ”Ğûÿÿÿÿ8ÂµÉ‚2J$af60c108-a67f-45af-88fe-e32680fe23cf
 ™
-java:S3457}"Q%n should be used in place of \n to produce the platform-specific line separator.(º†àÄøÿÿÿÿ8ÂµÉ‚2J$57fd43a5-f6ec-43e2-896a-5b7c625eeeff
-r	java:S106}"+Replace this use of System.out by a logger.(º†àÄøÿÿÿÿ8ÂµÉ‚2J$1d311dc5-546f-478c-85d3-6f43a0bd0e80
-s	java:S106‚"+Replace this use of System.out by a logger.(‰×˜™ùÿÿÿÿ8ÂµÉ‚2J$1387ba7c-9820-4e9b-aa36-8d12d33e2d8c
+java:S3457|"Q%n should be used in place of \n to produce the platform-specific line separator.(º†àÄøÿÿÿÿ8ÂµÉ‚2J$79fb8de8-1f4b-4fdf-bb07-c88e3c174509
+r	java:S106|"+Replace this use of System.out by a logger.(º†àÄøÿÿÿÿ8ÂµÉ‚2J$0b0ea55f-01e1-4bd4-86d5-251acc9145aa
+s	java:S106"+Replace this use of System.out by a logger.(‰×˜™ùÿÿÿÿ8ÂµÉ‚2J$f44bb338-5b8d-4852-847b-9f5e30b95155

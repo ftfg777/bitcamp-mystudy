@@ -36,8 +36,6 @@ public class BoardCommand {
     }
 
     private static void addBoard() {
-        System.out.println("게시판 생성");
-
         Board board = new Board(
             input("제목?"), input("내용?"));
 
@@ -92,7 +90,7 @@ public class BoardCommand {
             System.out.println("없는 게시글입니다.");
             return;
         }
-        
+
         for (int i = boardNo; i < boardLength; i++) {
             boards[i - 1] = boards[i];
         }
