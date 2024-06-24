@@ -1,23 +1,27 @@
 package bitcamp.myapp.vo;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class Board {
 
+    private static int seqNo;
+
+    private int no;
     private String title;
     private String content;
-    private String writeDate;
-    private int viewCount = 0;
+    private Date createdDate;
+    private int viewCount;
 
-    public Board() {
+    public static int getNextSeqNo() {
+        return ++seqNo;
     }
 
-    public Board(String title, String content) {
-        this.title = title;
-        this.content = content;
+    public int getNo() {
+        return no;
+    }
 
-        localDateFormat();
+    public void setNo(int no) {
+        this.no = no;
     }
 
     public String getTitle() {
@@ -36,24 +40,19 @@ public class Board {
         this.content = content;
     }
 
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
     public int getViewCount() {
         return viewCount;
     }
 
-    public void viewCountUp() {
-        this.viewCount++;
-    }
-
-    public String getWriteDate() {
-        return writeDate;
-    }
-    
-
-    private void localDateFormat() {
-        LocalDate currentDate = LocalDate.now();
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
-        this.writeDate = currentDate.format(formatter);
+    public void setViewCount(int viewCount) {
+        this.viewCount = viewCount;
     }
 }

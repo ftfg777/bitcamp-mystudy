@@ -1,112 +1,97 @@
 package bitcamp.myapp.command;
 
-
-import static bitcamp.myapp.util.Prompt.input;
-import static bitcamp.myapp.util.Prompt.inputInt;
-
+import bitcamp.myapp.util.Prompt;
 import bitcamp.myapp.vo.User;
 
 public class UserCommand {
 
-    private static final int MAX_SIZE = 100;
-    private static User[] users = new User[MAX_SIZE];
-    private static int userLength = 0;
+    UserList userList = new UserList();
 
 
-    public static void executeUserCommand(String command) {
+    public void executeUserCommand(String command) {
         System.out.printf("[%s]\n", command);
         switch (command) {
             case "등록":
-                addUser();
+                this.addUser();
                 break;
             case "조회":
-                viewUser();
+                this.viewUser();
                 break;
             case "목록":
-                listUser();
+                this.listUser();
                 break;
             case "변경":
-                updateUser();
+                this.updateUser();
                 break;
             case "삭제":
-                deleteUser();
+                this.deleteUser();
                 break;
         }
-
     }
 
-    private static void addUser() {
+    private void addUser() {
         User user = new User();
-        user.setName(input("이름?"));
-        user.setEmail(input("이메일?"));
-        user.setPassword(input("암호?"));
-        user.setTel(input("연락처?"));
+        user.setName(Prompt.input("이름?"));
+        user.setEmail(Prompt.input("이메일?"));
+        user.setPassword(Prompt.input("암호?"));
+        user.setTel(Prompt.input("연락처?"));
+        user.setNo(User.getNextSeqNo());
 
-        users[userLength++] = user;
-        System.out.println("등록됐습니다.");
+        userList.add(user);
     }
 
-
-    private static void listUser() {
+    private void listUser() {
         System.out.println("번호 이름 이메일");
 
-        for (int i = 0; i < userLength; i++) {
-            User user = users[i];
-            System.out.printf("%d %s %s\n", (i + 1), user.getName(), user.getEmail());
+        for (Object obj : userList.toArray()) {
+            User user = (User) obj; // 배열은 이렇게 받기
+            System.out.printf("%d %s %s\n", user.getNo(), user.getName(), user.getEmail());
         }
     }
 
-
-    private static void viewUser() {
-        int userNo = inputInt("회원번호?");
-        if (userNo < 1 || userNo > userLength) {
-            System.out.println("없는 회원입니다");
+    private void viewUser() {
+        int userNo = Prompt.inputInt("회원번호?");
+        User user = userList.findByNo(userNo);
+        if (user == null) {
+            System.out.println("없는 회원입니다.");
             return;
         }
-        User user = users[userNo - 1];
+
         System.out.printf("이름: %s\n", user.getName());
         System.out.printf("이메일: %s\n", user.getEmail());
         System.out.printf("연락처: %s\n", user.getTel());
-
     }
 
-
-    private static void updateUser() {
-
-        int userNo = inputInt("회원번호?");
-        if (userNo < 1 || userNo > userLength) {
-            System.out.println("없는 회원입니다");
+    private void updateUser() {
+        int userNo = Prompt.inputInt("회원번호?");
+        User user = userList.findByNo(userNo);
+        if (user == null) {
+            System.out.println("없는 회원입니다.");
             return;
         }
-        User user = users[userNo - 1];
-        user.setName(input("이름(%s)?", user.getName()));
-        user.setEmail(input("이메일(%s)?", user.getEmail()));
-        user.setPassword(input("암호는?"));
-        user.setTel(input("연락처(%s)?", user.getTel()));
 
-        System.out.println("변경했습니다.");
+        user.setName(Prompt.input("이름(%s)?", user.getName()));
+        user.setEmail(Prompt.input("이메일(%s)?", user.getEmail()));
+        user.setPassword(Prompt.input("암호?"));
+        user.setTel(Prompt.input("연락처(%s)?", user.getTel()));
+        System.out.println("변경 했습니다.");
     }
 
-    private static void deleteUser() {
-        int userNo = inputInt("회원번호?");
-        if (userNo < 1 || userNo > userLength) {
-            System.out.println("없는 회원입니다");
-            return;
+    private void deleteUser() {
+        int userNo = Prompt.inputInt("회원번호?");
+        User deletedUser = userList.findByNo(userNo);
+        
+        if (deletedUser != null) {
+            userList.remove(userList.indexOf(deletedUser));
+            System.out.printf("'%s' 회원을 삭제 했습니다.\n", deletedUser.getName());
+        } else {
+            System.out.println("없는 회원입니다.");
         }
-        // 다음 값을 앞으로 당긴다
-        for (int i = userNo; i < userLength; i++) {
-            users[i - 1] = users[i];
-        }
-        userLength--;
-        users[userLength] = null;
-        System.out.println("삭제됐습니다.");
     }
 
 
-    public static User findByNo(int userNo) {
-        if (userNo < 1 || userNo > userLength) {
-            return null;
-        }
-        return users[userNo - 1];
+    public UserList getUserList() {
+        return userList;
     }
+
 }

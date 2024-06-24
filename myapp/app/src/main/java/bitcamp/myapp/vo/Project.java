@@ -1,13 +1,30 @@
 package bitcamp.myapp.vo;
 
+
+import bitcamp.myapp.command.ArrayList;
+
 public class Project {
 
-    private int memberSize = 0;
+    private static int seqNo;
+
+    private int no;
     private String title;
     private String description;
     private String startDate;
     private String endDate;
-    private User[] members = new User[10];
+    private ArrayList members = new ArrayList();
+
+    public static int getNextSeqNo() {
+        return ++seqNo;
+    }
+
+    public int getNo() {
+        return no;
+    }
+
+    public void setNo(int no) {
+        this.no = no;
+    }
 
     public String getTitle() {
         return title;
@@ -41,36 +58,7 @@ public class Project {
         this.endDate = endDate;
     }
 
-    public void addMember(User user) {
-        this.members[memberSize++] = user;
-    }
-
-    public boolean containsMember(User user) {
-        for (int i = 0; i < memberSize; i++) {
-            User member = members[i];
-            if (member.getName().equals(user.getName())) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public User[] getMembers() {
+    public ArrayList getMembers() {
         return members;
-    }
-
-    public User getMember(int index) {
-        return members[index];
-    }
-
-    public int getMemberSize() {
-        return memberSize;
-    }
-
-    public void deleteMember(int index) {
-        for (int i = index + 1; i < memberSize; i++) {
-            members[i - 1] = members[i];
-        }
-        members[--memberSize] = null;
     }
 }

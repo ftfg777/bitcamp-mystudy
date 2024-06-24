@@ -1,13 +1,27 @@
 package bitcamp.myapp.vo;
 
+// 메모리 설계도
 public class User {
 
-    // Non-static 변수 (field; 변수) = 인스터스(instance)필드
+    private static int seqNo;
 
+    private int no;
     private String name;
     private String email;
     private String password;
     private String tel;
+
+    public static int getNextSeqNo() {
+        return ++seqNo;
+    }
+
+    public int getNo() {
+        return no;
+    }
+
+    public void setNo(int no) {
+        this.no = no;
+    }
 
     public String getName() {
         return name;
@@ -24,7 +38,11 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
+    public String getPassword() {
+        return password;
+    }
+
     public void setPassword(String password) {
         this.password = password;
     }

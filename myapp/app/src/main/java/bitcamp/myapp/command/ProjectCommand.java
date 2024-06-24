@@ -1,21 +1,20 @@
 package bitcamp.myapp.command;
 
-
-import static bitcamp.myapp.util.Prompt.input;
-import static bitcamp.myapp.util.Prompt.inputInt;
-
 import bitcamp.myapp.util.Prompt;
 import bitcamp.myapp.vo.Project;
 import bitcamp.myapp.vo.User;
 
 public class ProjectCommand {
 
-    private static final int MAX_SIZE = 100;
-    private static Project[] projects = new Project[MAX_SIZE];
-    private static int projectLength = 0;
+    ProjectList projectList = new ProjectList();
+    UserList userList; //생성자로 받은 유저리스트를 사용해야 하기 때문에 new 생략
+
+    public ProjectCommand(UserList userList) {
+        this.userList = userList;
+    }
 
 
-    public static void executeProjectCommand(String command) {
+    public void executeProjectCommand(String command) {
         System.out.printf("[%s]\n", command);
         switch (command) {
             case "등록":
@@ -34,124 +33,120 @@ public class ProjectCommand {
                 deleteProject();
                 break;
         }
-
     }
 
-    private static void addProject() {
+    private void addProject() {
         Project project = new Project();
         project.setTitle(Prompt.input("프로젝트명?"));
         project.setDescription(Prompt.input("설명?"));
         project.setStartDate(Prompt.input("시작일?"));
         project.setEndDate(Prompt.input("종료일?"));
 
+        System.out.println("팀원:");
         addMembers(project);
 
-        projects[projectLength++] = project;
-        System.out.println("등록했습니다.");
+        project.setNo(Project.getNextSeqNo());
 
+        projectList.add(project);
+        System.out.println("등록했습니다.");
     }
 
-
-    private static void listProject() {
-        System.out.println("번호 프로젝트명 기간");
-
-        for (int i = 0; i < projectLength; i++) {
-            Project project = projects[i];
+    private void listProject() {
+        System.out.println("번호 프로젝트 기간");
+        Object[] objs = projectList.toArray();
+        for (Object obj : objs) {
+            Project project = (Project) obj;
             System.out.printf("%d %s %s ~ %s\n",
-                (i + 1), project.getTitle(), project.getStartDate(), project.getEndDate());
+                project.getNo(), project.getTitle(), project.getStartDate(), project.getEndDate());
         }
     }
 
-    private static void viewProject() {
-        int projectNo = inputInt("프로젝트 번호?");
-        if (projectNo < 1 || projectNo > projectLength) {
+    private void viewProject() {
+        int projectNo = Prompt.inputInt("프로젝트 번호?");
+        Project project = projectList.findByNo(projectNo);
+        if (project == null) {
             System.out.println("없는 프로젝트입니다.");
             return;
         }
-        Project project = projects[projectNo - 1];
+
         System.out.printf("프로젝트명: %s\n", project.getTitle());
         System.out.printf("설명: %s\n", project.getDescription());
         System.out.printf("기간: %s ~ %s\n", project.getStartDate(), project.getEndDate());
         System.out.println("팀원:");
-
-        for (int i = 0; i < project.getMemberSize(); i++) {
-//            User member = project.getMembers()[i]; //배열 전체를 넘겨 받기
-            User member = project.getMember(i); // 객체 하나만 넘겨 받기
-            System.out.printf("- %s\n", member.getName());
+        for (int i = 0; i < project.getMembers().size(); i++) {
+            User user = (User) project.getMembers().get(i);
+            System.out.printf("- %s\n", user.getName());
         }
     }
 
-    private static void updateProject() {
-
-        int projectNo = inputInt("프로젝트 번호?");
-        if (projectNo < 1 || projectNo > projectLength) {
-            System.out.println("없는 프로젝트입니다");
+    private void updateProject() {
+        int projectNo = Prompt.inputInt("프로젝트 번호?");
+        Project project = projectList.findByNo(projectNo);
+        if (project == null) {
+            System.out.println("없는 프로젝트입니다.");
             return;
         }
-        Project project = projects[projectNo - 1];
-        project.setTitle(input("프로젝트명(%s)?", project.getTitle()));
-        project.setDescription(input("설명(%s)?", project.getDescription()));
-        project.setStartDate(input("시작일(%s)?", project.getStartDate()));
-        project.setEndDate(input("종료일(%s)?", project.getEndDate()));
+
+        project.setTitle(Prompt.input("프로젝트명(%s)?", project.getTitle()));
+        project.setDescription(Prompt.input("설명(%s)?", project.getDescription()));
+        project.setStartDate(Prompt.input("시작일(%s)?", project.getStartDate()));
+        project.setEndDate(Prompt.input("종료일(%s)?", project.getEndDate()));
 
         System.out.println("팀원:");
         deleteMembers(project);
         addMembers(project);
 
-        System.out.println("변경했습니다.");
+        System.out.println("변경 했습니다.");
+    }
+
+    private void deleteProject() {
+        int projectNo = Prompt.inputInt("프로젝트 번호?");
+        Project deleteProject = projectList.findByNo(projectNo);
+
+        if (deleteProject != null) {
+            projectList.remove(projectList.indexOf(deleteProject));
+            System.out.printf("'%s' 프로젝트를 삭제 했습니다.", deleteProject.getTitle());
+        } else {
+            System.out.println("없는 프로젝트입니다.");
+        }
 
     }
 
-    private static void deleteProject() {
-        int projectNo = inputInt("프로젝트 번호?");
-        if (projectNo < 1 || projectNo > projectLength) {
-            System.out.println("없는 프로젝트입니다");
-            return;
-        }
-        // 다음 값을 앞으로 당긴다
-        for (int i = projectNo; i < projectLength; i++) {
-            projects[i - 1] = projects[i];
-        }
-        projectLength--;
-        projects[projectLength] = null;
-        System.out.println("삭제됐습니다.");
-
-    }
-
-
-    private static void addMembers(Project project) {
-
+    private void addMembers(Project project) {
         while (true) {
-            int userNo = inputInt("추가할 팀원 번호?(종료: 0)");
+            int userNo = Prompt.inputInt("추가할 팀원 번호?(종료: 0)");
             if (userNo == 0) {
                 break;
             }
-            User user = UserCommand.findByNo(userNo);
+
+            User user = this.userList.findByNo(userNo);
             if (user == null) {
                 System.out.println("없는 팀원입니다.");
                 continue;
             }
-            if (project.containsMember(user)) {
+
+            if (project.getMembers().indexOf(user) != -1) {
                 System.out.printf("'%s'은 현재 팀원입니다.\n", user.getName());
                 continue;
             }
-            project.addMember(user);
+
+            project.getMembers().add(user);
             System.out.printf("'%s'을 추가했습니다.\n", user.getName());
         }
     }
 
+    private void deleteMembers(Project project) {
+        for (int i = 0; i < project.getMembers().size(); i++) {
+            User user = (User) project.getMembers().get(i);
+            String str = Prompt.input("팀원(%s) 삭제?", user.getName());
 
-    private static void deleteMembers(Project project) {
-        for (int i = project.getMemberSize() - 1; i >= 0; i--) {
-            User member = project.getMember(i);
-            String delete = (input("팀원(%s) 삭제(Y/N)?", member.getName()));
-
-            if (delete.equalsIgnoreCase("Y")) {
-                project.deleteMember(i - 1);
-                System.out.printf("'%s' 팀원을 삭제합니다.\n", member.getName());
+            if (str.equalsIgnoreCase("y")) {
+                project.getMembers().remove(i);
+                System.out.printf("'%s' 팀원을 삭제합니다.\n", user.getName());
             } else {
-                System.out.printf("'%s' 팀원을 유지합니다.\n", member.getName());
+                System.out.printf("'%s' 팀원을 유지합니다.\n", user.getName());
             }
         }
     }
+
 }
