@@ -51,3 +51,7 @@ g
 7app/src/main/java/bitcamp/myapp/command/BoardList2.java,d/c/dc77d605aa125a9712a4f46ea0eb5de8ce9d73d0
 j
 :app/src/main/java/bitcamp/myapp/command/BoardCommand2.java,e/0/e0d77dcd1ab27cdae60832fb8dda1155365fbc9a
+a
+1app/src/main/java/bitcamp/myapp/command/Node.java,1/1/1158841a4441fb853616cffedd76ba1c9d0ccf63
+g
+7app/src/main/java/bitcamp/myapp/command/LinkedList.java,7/a/7a828c2bdaecf797631271a38f49a5440ab4e63b

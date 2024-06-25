@@ -37,13 +37,13 @@ public class UserCommand {
         user.setTel(Prompt.input("연락처?"));
         user.setNo(User.getNextSeqNo());
 
-        userList.add(user);
+        userList.append(user);
     }
 
     private void listUser() {
         System.out.println("번호 이름 이메일");
 
-        for (Object obj : userList.toArray()) {
+        for (Object obj : userList.getArray()) {
             User user = (User) obj; // 배열은 이렇게 받기
             System.out.printf("%d %s %s\n", user.getNo(), user.getName(), user.getEmail());
         }
@@ -80,9 +80,9 @@ public class UserCommand {
     private void deleteUser() {
         int userNo = Prompt.inputInt("회원번호?");
         User deletedUser = userList.findByNo(userNo);
-        
+
         if (deletedUser != null) {
-            userList.remove(userList.indexOf(deletedUser));
+            userList.delete(userList.index(deletedUser));
             System.out.printf("'%s' 회원을 삭제 했습니다.\n", deletedUser.getName());
         } else {
             System.out.println("없는 회원입니다.");
