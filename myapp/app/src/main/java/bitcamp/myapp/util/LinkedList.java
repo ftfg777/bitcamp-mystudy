@@ -1,46 +1,13 @@
-package bitcamp.myapp.command;
+package bitcamp.myapp.util;
 
-public class LinkedList {
+public class LinkedList extends AbstractList {
 
-    Node first;
-    Node last;
-    int size;
-
-
-    public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-
-        list.append("홍길동");
-        list.append("임꺽정");
-        list.append("유관순");
-        list.append("안중근");
-        list.append("윤봉길");
-        list.append("김구");
-
-        list.delete(2);
-        list.printAll();
-
-        list.delete(2);
-        list.printAll();
-
-        list.delete(2);
-        list.printAll();
-
-        list.delete(2);
-        list.printAll();
+    private Node first;
+    private Node last;
 
 
-    }
-
-    public void printAll() {
-        Node cursor = first;
-        while (cursor != null) {
-            System.out.println(cursor.value);
-            cursor = cursor.next;
-        }
-    }
-
-    public void append(Object value) {
+    @Override
+    public void add(Object value) {
         Node newNode = new Node(value);
 
         if (first == null) {
@@ -53,7 +20,8 @@ public class LinkedList {
     }
 
 
-    public Object delete(int index) {
+    @Override
+    public Object remove(int index) {
         if (index < 0 || index >= size) {
             return null;
         }
@@ -86,12 +54,13 @@ public class LinkedList {
         return deleteNode.value;
     }
 
-    public int index(Object value) {
+    @Override
+    public int indexOf(Object value) {
         Node cursor = first;
         int currentIndex = 0;
 
         while (cursor != null) {
-            if (cursor.value == value) {
+            if (cursor.value.equals(value)) {
                 return currentIndex;
             }
             cursor = cursor.next;
@@ -101,7 +70,8 @@ public class LinkedList {
     }
 
 
-    public Object getValue(int index) {
+    @Override
+    public Object get(int index) {
         if (index < 0 || index >= size) {
             return null;
         }
@@ -119,7 +89,8 @@ public class LinkedList {
         return null;
     }
 
-    public Object[] getArray() {
+    @Override
+    public Object[] toArray() {
         Object[] arr = new Object[size];
         Node cursor = first;
         for (int i = 0; i < size; i++) {
@@ -129,8 +100,16 @@ public class LinkedList {
         return arr;
     }
 
-    public int size() {
-        return size;
-    }
 
+    // 1) 스태틱 중첩 클래스
+    // LinkedList 안에서만 사용하기 때문에 안에 둠 (밖 클래스의 인스턴스 변수를 사용하면 논 스태틱)
+    private static class Node {
+
+        Object value;
+        Node next;
+
+        public Node(Object value) {
+            this.value = value;
+        }
+    }
 }
