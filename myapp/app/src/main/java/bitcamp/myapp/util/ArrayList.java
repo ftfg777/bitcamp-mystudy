@@ -4,19 +4,19 @@ import java.util.Arrays;
 
 public class ArrayList extends AbstractList {
 
-
     private static final int MAX_SIZE = 3;
     private Object[] list = new Object[MAX_SIZE];
 
-
-    @Override // 재정의 또는 추상메소드 구현을 의미
+    @Override
     public void add(Object obj) {
         if (size == list.length) {
             // 1) 우리가 만든 메서드를 사용하여 배열 크기 증가
-            // grow();
+            //grow();
 
-            // 2) 자바에서 제공하는 클래스를 이용하여 배열 크기 증가
-            list = Arrays.copyOf(list, list.length + (list.length >> 1));
+            // 2) 자바에서 제공하는 클래스를 사용하여 배열 크기 증가
+            int oldSize = list.length;
+            int newSize = oldSize + (oldSize >> 1);
+            list = Arrays.copyOf(list, newSize);
         }
         list[size++] = obj;
     }
@@ -24,11 +24,14 @@ public class ArrayList extends AbstractList {
     private void grow() {
         int oldSize = list.length;
         int newSize = oldSize + (oldSize >> 1); // 50% 증가
-        Object[] arr = new Object[newSize]; //새 배열을 만든다
-        for (int i = 0; i < list.length; i++) {
+
+        Object[] arr = new Object[newSize]; // 새 배열을 만든다.
+
+        for (int i = 0; i < list.length; i++) { // 기존 배열의 값을 복사해온다.
             arr[i] = list[i];
         }
-        list = arr; // 기존 배열의 주소를 버리고 새 배열의 주소를 담는다
+
+        list = arr; // 기존 배열의 주소를 버리고 새 배열의 주소를 담는다.
     }
 
     @Override
@@ -36,13 +39,12 @@ public class ArrayList extends AbstractList {
         if (index < 0 || index >= size) {
             return null;
         }
-        Object deleteObj = list[index];
+        Object deletedObj = list[index];
         for (int i = index + 1; i < size; i++) {
             list[i - 1] = list[i];
         }
         list[--size] = null;
-
-        return deleteObj;
+        return deletedObj;
     }
 
     @Override
@@ -75,4 +77,5 @@ public class ArrayList extends AbstractList {
     public boolean contains(Object obj) {
         return indexOf(obj) != -1;
     }
+
 }

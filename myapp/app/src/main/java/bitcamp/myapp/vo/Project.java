@@ -15,11 +15,12 @@ public class Project {
     private String endDate;
     private ArrayList members = new ArrayList();
 
+
     public Project() {
     }
 
-    public Project(int no) {
-        this.no = no;
+    public Project(int projectNo) {
+        this.no = projectNo;
     }
 
     public static int getNextSeqNo() {

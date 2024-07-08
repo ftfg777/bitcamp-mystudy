@@ -13,13 +13,6 @@ public class Board {
     private Date createdDate;
     private int viewCount;
 
-    public Board() {
-    }
-
-    public Board(int no) {
-        this.no = no;
-    }
-
     public static int getNextSeqNo() {
         return ++seqNo;
     }

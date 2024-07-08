@@ -1,8 +1,8 @@
 
 }
-java:S1118":Add a private constructor to hide the implicit public one.(Í’‘Û8ïÄ“Ë‚2J$797e0075-37e6-459f-b69c-9d8f82a9d3b9
+java:S1118":Add a private constructor to hide the implicit public one.(Í’‘Û8ïÄ“Ë‚2J$a4bb78f1-4183-41b3-afb8-261663651746
 „
 java:S3457
-"AFormat specifiers should be used instead of string concatenation.(÷„¬ü8“ó¤Ë‚2J$6b92ff0c-69fa-4641-b704-e91061f7daae
+"AFormat specifiers should be used instead of string concatenation.(÷„¬ü8“ó¤Ë‚2J$ed0f14de-d4ac-4be0-8250-946359a9963c
 m	java:S106
-"+Replace this use of System.out by a logger.(÷„¬ü8òÄ“Ë‚2J$d4b6b99f-3a06-46dc-826c-628d1aa0d7ce
+"+Replace this use of System.out by a logger.(÷„¬ü8òÄ“Ë‚2J$2b81e0ce-e5ef-4ffb-9b1c-59f575547d43

@@ -4,13 +4,32 @@ import bitcamp.myapp.util.LinkedList;
 import bitcamp.myapp.util.Prompt;
 import bitcamp.myapp.vo.User;
 
-public class UserCommand {
+public class UserCommand extends AbstractCommand {
 
+    String[] menus = {"등록", "목록", "조회", "변경", "삭제"};
     LinkedList userList = new LinkedList();
 
-    public void executeUserCommand(String command) {
-        System.out.printf("[%s]\n", command);
-        switch (command) {
+    public UserCommand(String menuTitle) {
+        super(menuTitle);
+        dummyData();
+    }
+
+    public void dummyData() {
+        for (int i = 0; i < 10; i++) {
+            User user = new User();
+            user.setNo(User.getNextSeqNo());
+            user.setName("" + (i + 1));
+            user.setEmail("" + (i + 1));
+            user.setPassword("" + i);
+            user.setTel("" + i);
+            userList.add(user);
+        }
+    }
+
+    @Override
+    protected void processMenu(String menuName) {
+        System.out.printf("[%s]\n", menuName);
+        switch (menuName) {
             case "등록":
                 this.addUser();
                 break;
@@ -26,7 +45,15 @@ public class UserCommand {
             case "삭제":
                 this.deleteUser();
                 break;
+            default:
+                System.out.printf("%s 메뉴의 명령을 처리할 수 없습니다.\n", menuName);
         }
+
+    }
+
+    @Override
+    protected String[] getMenus() {
+        return menus;
     }
 
     private void addUser() {
@@ -36,22 +63,19 @@ public class UserCommand {
         user.setPassword(Prompt.input("암호?"));
         user.setTel(Prompt.input("연락처?"));
         user.setNo(User.getNextSeqNo());
-
         userList.add(user);
     }
 
     private void listUser() {
         System.out.println("번호 이름 이메일");
-
         for (Object obj : userList.toArray()) {
-            User user = (User) obj; // 배열은 이렇게 받기
-            System.out.printf("%d %s %s\n", user.getNo(), user.getName(), user.getEmail());
+            User user = (User) obj;
+            System.out.printf("%d \t %s \t  %s\n", user.getNo(), user.getName(), user.getEmail());
         }
     }
 
     private void viewUser() {
         int userNo = Prompt.inputInt("회원번호?");
-
         User user = (User) userList.get(userList.indexOf(new User(userNo)));
         if (user == null) {
             System.out.println("없는 회원입니다.");
@@ -81,7 +105,6 @@ public class UserCommand {
     private void deleteUser() {
         int userNo = Prompt.inputInt("회원번호?");
         User deletedUser = (User) userList.get(userList.indexOf(new User(userNo)));
-
         if (deletedUser != null) {
             userList.remove(userList.indexOf(deletedUser));
             System.out.printf("'%s' 회원을 삭제 했습니다.\n", deletedUser.getName());
@@ -90,9 +113,9 @@ public class UserCommand {
         }
     }
 
-
     public LinkedList getUserList() {
         return userList;
     }
+
 
 }

@@ -15,16 +15,15 @@ public class User {
 
     public User() {
     }
-    
 
-    public User(int no) {
-        this.no = no;
+    public User(int userNo) {
+        this.no = userNo;
     }
-
 
     public static int getNextSeqNo() {
         return ++seqNo;
     }
+
 
     @Override
     public boolean equals(Object object) {

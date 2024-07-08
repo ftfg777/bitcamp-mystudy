@@ -1,0 +1,13 @@
+
+ 	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8§İèŒ‰2J$868d903b-fb19-417c-b919-0de31870b918
+|
+java:S5993	"9Change the visibility of this constructor to "protected".(¸ĞÀ×8«İèŒ‰2J$af44b1c1-30d4-4488-b8bc-2e5341d98168
+r	java:S106"+Replace this use of System.out by a logger.(ÿ”Ğûÿÿÿÿ8¯İèŒ‰2J$f2c44efe-8cf8-4f8e-b6bb-24f063b7322b
+r	java:S106$"+Replace this use of System.out by a logger.(‰×˜™ùÿÿÿÿ8±İèŒ‰2J$19c49482-3347-4421-9f91-d153d51c6fa7
+™
+java:S3457+"Q%n should be used in place of \n to produce the platform-specific line separator.(üæ°øıÿÿÿÿ8‡øøŒ‰2J$6cd8c16b-928d-45f0-8fd0-81e86d216e4f
+r	java:S106+"+Replace this use of System.out by a logger.(üæ°øıÿÿÿÿ8‡øøŒ‰2J$ed25fff1-72cd-403b-a23c-2760879c5216
+”
+java:S3457-"Q%n should be used in place of \n to produce the platform-specific line separator.(óı‡8ä«ùŒ‰2J$36558381-5e7f-4860-a72f-e873d6f2ae70
+m	java:S106-"+Replace this use of System.out by a logger.(óı‡8‡øøŒ‰2J$ae51a36b-8ffc-4ff0-bb55-0625e2d5e551
+m	java:S106/"+Replace this use of System.out by a logger.(ñÊ§§8‡øøŒ‰2J$31326835-1957-445d-b4b0-0d2b85ce1d8a
