@@ -1,11 +1,9 @@
 package bitcamp.myapp.command;
 
-import bitcamp.myapp.util.Stack;
-
 public class HelpCommand implements Command {
 
     @Override
-    public void execute(Stack menuPath) {
+    public void execute() {
         System.out.println("도움말입니다.");
     }
 }

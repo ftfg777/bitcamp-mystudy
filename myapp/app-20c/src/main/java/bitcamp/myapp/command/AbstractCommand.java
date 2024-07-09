@@ -1,7 +1,6 @@
 package bitcamp.myapp.command;
 
 import bitcamp.myapp.util.Prompt;
-import bitcamp.myapp.util.Stack;
 
 public abstract class AbstractCommand implements Command {
 
@@ -12,17 +11,14 @@ public abstract class AbstractCommand implements Command {
     }
 
     @Override
-    public void execute(Stack menuPath) {
-        menuPath.push(menuTitle);
-
+    public void execute() {
         printMenus();
         while (true) {
-            String commend = Prompt.input("%s>", getMenuPathTitle(menuPath));
+            String commend = Prompt.input(String.format("메인/%s>", menuTitle));
             if (commend.equals("menu")) {
                 printMenus();
                 continue;
             } else if (commend.equals("9")) { // 이전 메뉴 선택
-                menuPath.pop();
                 return;
             }
 
@@ -60,19 +56,6 @@ public abstract class AbstractCommand implements Command {
     private String getMenuTitle(int menuNo) {
         String[] menus = getMenus();
         return isValidateMenu(menuNo) ? menus[menuNo - 1] : null;
-    }
-
-    private String getMenuPathTitle(Stack menuPath) {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < menuPath.size(); i++) {
-            if (!stringBuilder.isEmpty()) {
-                stringBuilder.append("/");
-            }
-            stringBuilder.append(menuPath.get(i));
-            // 문자열을 연결하는 과정에서 새 String 객체가 생성되고 기존 String 객체가 garbage 됨
-            // 메모리 낭비가 심하다
-        }
-        return stringBuilder.toString();
     }
 
 

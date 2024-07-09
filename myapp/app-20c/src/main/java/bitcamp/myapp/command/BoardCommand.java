@@ -35,6 +35,7 @@ public class BoardCommand extends AbstractCommand {
             case "삭제":
                 this.deleteBoard();
                 break;
+
         }
     }
 

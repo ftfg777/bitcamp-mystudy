@@ -3,22 +3,19 @@ package bitcamp.myapp;
 import bitcamp.myapp.command.BoardCommand;
 import bitcamp.myapp.command.Command;
 import bitcamp.myapp.command.HelpCommand;
-import bitcamp.myapp.command.HistoryCommand;
 import bitcamp.myapp.command.ProjectCommand;
 import bitcamp.myapp.command.UserCommand;
 import bitcamp.myapp.util.ArrayList;
 import bitcamp.myapp.util.LinkedList;
 import bitcamp.myapp.util.List;
 import bitcamp.myapp.util.Prompt;
-import bitcamp.myapp.util.Stack;
 import java.util.HashMap;
 import java.util.Map;
 
 public class App {
 
 
-    String[] mainMenus = new String[]{"회원", "프로젝트", "게시판", "도움말", "명령내역", "종료"};
-    Stack menuPath = new Stack();
+    String[] mainMenus = new String[]{"회원", "프로젝트", "게시판", "공지사항", "도움말", "종료"};
 
     Map<String, Command> commandMap = new HashMap<>();
 
@@ -26,13 +23,12 @@ public class App {
         List userList = new ArrayList();
         List projectList = new LinkedList();
         List boardList = new LinkedList();
+        List noticeList = new ArrayList();
 
         commandMap.put("회원", new UserCommand("회원", userList));
         commandMap.put("게시판", new BoardCommand("게시판", boardList));
         commandMap.put("프로젝트", new ProjectCommand("프로젝트", projectList, boardList));
         commandMap.put("도움말", new HelpCommand());
-        commandMap.put("명령내역", new HistoryCommand());
-
     }
 
     public static void main(String[] args) {
@@ -40,14 +36,12 @@ public class App {
     }
 
     void execute() {
-        menuPath.push("메인");
-
         printMenu();
 
         String command;
         while (true) {
             try {
-                command = Prompt.input("%s>", getMenuPathTitle(menuPath));
+                command = Prompt.input("메인>");
 
                 if (command.equals("menu")) {
                     printMenu();
@@ -110,20 +104,7 @@ public class App {
             System.out.printf("%s 메뉴의 명령을 처리할 수 없습니다.\n", menuTitle);
             return;
         }
-        command.execute(menuPath);
-    }
-
-    private String getMenuPathTitle(Stack menuPath) {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < menuPath.size(); i++) {
-            if (!stringBuilder.isEmpty()) {
-                stringBuilder.append("/");
-            }
-            stringBuilder.append(menuPath.get(i));
-            // 문자열을 연결하는 과정에서 새 String 객체가 생성되고 기존 String 객체가 garbage 됨
-            // 메모리 낭비가 심하다
-        }
-        return stringBuilder.toString();
+        command.execute();
     }
 
 }
