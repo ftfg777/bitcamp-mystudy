@@ -2,7 +2,7 @@ package bitcamp.myapp.util;
 
 import java.util.NoSuchElementException;
 
-public abstract class AbstractList implements List {
+public abstract class AbstractList03 implements List {
 
     int size;
 
@@ -11,15 +11,16 @@ public abstract class AbstractList implements List {
         return size;
     }
 
-    @Override
     public boolean contains(Object obj) {
         return indexOf(obj) != -1;
     }
 
     @Override
     public Iterator iterator() {
-        // 4) anonymous class 익명 클래스
-        return new Iterator() {
+
+        // 3) local class
+        class ListIterator implements Iterator {
+
             private int cursor;
 
             @Override
@@ -35,8 +36,8 @@ public abstract class AbstractList implements List {
                     throw new NoSuchElementException("No more elements");
                 }
             }
-        };
+        }
+
+        return new ListIterator();
     }
-
-
 }
