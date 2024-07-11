@@ -1,31 +1,40 @@
-# 16. LinkedList 자료구조 구현하기: 배열의 단점 극복
+# 22. Iterator 디자인 패턴을 활용하여 목록 조회 기능을 캡슐화하기
 
 ## 학습목표
 
-- LinkedList의 구동 원리를 설명하고 구현할 수 있다.
-- 배열을 사용할 때 유리한 경우와 링크드리스트를 사용할 때 유리한 경우를 설명할 수 있다.
+- GoF의 Iterator 설계 패턴을 이해하고 적용할 수 있다.
 
 ## 요구사항
 
-- 배열로 데이터 목록을 다루는 대신에 LinkedList 자료 구조를 이용하여 데이터 목록을 다루기
+- 자료구조에 상관없이 일관된 방법으로 데이터를 조회할 수 있도록 캡슐화 하기
 
 ## 실행 결과
 
 - 이전과 같다.
 
-
 ## 작업
 
-- 값을 보관한 노드 역할을 할 클래스를 정의한다.
-  - Node 클래스 추가
-- Linked List 자료구조를 구현한다.
-  - LinkedList 클래스 추가
-- UserList 클래스의 수퍼 클래스를 ArrayList 대신 LinkedList로 교체한다.
-  - UserList 클래스 변경
-- UserList 클래스 변경에 따라 UserCommand 클래스를 변경한다.
-  - UserCommand 클래스 변경
+### Iterator 인터페이스 정의 및 구현, 적용
+
+- Iterator 인터페이스 추가
+- List 인터페이스 변경
+  - iterator() 메서드 추가
+- Iterator 구현체 추가
+  - ListIterator 클래스 정의
+- AbstractList 클래스 변경
+  - iterator() 추가: ListIterator 객체 리턴
+- Command 구현체에 적용
+  - BoardCommand, ProjectCommand, UserCommand 클래스 변경
+  
 
 ## 소스 파일
 
-- Node.java
-- LinkedList.java
+- Iterator.java
+- List.java
+- ListIterator.java
+- AbstractList.java
+- BoardCommand.java
+- ProjectCommand.java
+- UserCommand.java
+- Project.java
+  - 필드의 타입을 List로 변경

@@ -53,3 +53,8 @@ h
 8app/src/main/java/bitcamp/myapp/util/AbstractList03.java,8/b/8babf5fa7ecaf324ec75365e7a5a8ac19b586ef3
 a
 1app/src/main/java/bitcamp/myapp/IteratorTest.java,f/b/fbe8422425ed5e61804588e076e703fbf926f4ad
+=
+app/README.md,4/c/4c5b4e01137160a7f4b20b65b547907a29541367
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302

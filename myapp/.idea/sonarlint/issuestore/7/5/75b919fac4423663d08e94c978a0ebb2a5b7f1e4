@@ -1,9 +1,9 @@
 
 }
-java:S1118":Add a private constructor to hide the implicit public one.(Í’‘Û8¾ıö±‰2J$bf0f3860-e624-47c0-a0ca-191fc3d52a39
+java:S1118":Add a private constructor to hide the implicit public one.(Í’‘Û8ìŠÒş‰2J$c1c4cb1b-6909-4dea-882f-ffe1acee834e
 „
-java:S3457"AFormat specifiers should be used instead of string concatenation.( ”ı†8Ôıö±‰2J$b87929dd-20c1-491e-b3f9-f860320f3e94
-r	java:S106"+Replace this use of System.out by a logger.(Ó¢Ü‚ûÿÿÿÿ8×ıö±‰2J$42245e19-844c-4509-9de0-1096e9e60df7
-r	java:S106 "+Replace this use of System.out by a logger.(¢»—øÿÿÿÿ8Şıö±‰2J$db7b4f4e-605f-4549-8a95-4bd82bf01442
-l	java:S106""+Replace this use of System.out by a logger.(š½Á	8ßıö±‰2J$d8ad3e5e-5541-4ee8-8a24-0d038da40507
-r	java:S106$"+Replace this use of System.out by a logger.(Ù›¼ìüÿÿÿÿ8àıö±‰2J$d4494c94-69cf-4b4c-9131-c6d8dc4c85f0
+java:S3457"AFormat specifiers should be used instead of string concatenation.( ”ı†8¥‹Òş‰2J$5b1ba5b1-e575-434e-b418-e61304c949df
+r	java:S106"+Replace this use of System.out by a logger.(…Øùûÿÿÿÿ8¨‹Òş‰2J$97790e40-6214-49a3-bab6-7b1ad8ee8838
+r	java:S106!"+Replace this use of System.out by a logger.(°ö»şÿÿÿÿ8¶‹Òş‰2J$af9155f5-4d60-4c13-874e-08d5b96bf960
+l	java:S106#"+Replace this use of System.out by a logger.(š½Á	8¸‹Òş‰2J$0ccb031f-f0ba-406d-8749-94cb55eaa1d1
+m	java:S106%"+Replace this use of System.out by a logger.(öÛ8º‹Òş‰2J$a1aa17a5-5967-4d80-9107-93ad63b49d1c

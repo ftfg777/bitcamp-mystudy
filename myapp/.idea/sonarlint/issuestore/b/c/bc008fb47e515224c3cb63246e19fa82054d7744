@@ -1,32 +1,20 @@
 
-£
-java:S11926"[Define a constant instead of duplicating this literal "ì—†ëŠ” ê²Œì‹œê¸€ì…ë‹ˆë‹¤." 3 times.(øÂ–Ùÿÿÿÿÿ8Š…ß‰2J$f32fda8f-faad-48e7-baee-95345b49bcea
-š
-java:S11920"RDefine a constant instead of duplicating this literal "ê²Œì‹œê¸€ ë²ˆí˜¸?" 3 times.(ûéì‰şÿÿÿÿ8ŸŠ…ß‰2J$56310c59-7721-4770-abe5-e47bcdb8695f
-™
-java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ë÷Ìæıÿÿÿÿ8£Š…ß‰2J$0de76a7e-7d08-4a17-9ccf-f55ca1546ec5
-r	java:S106"+Replace this use of System.out by a logger.(ë÷Ìæıÿÿÿÿ8£Š…ß‰2J$c3a6ca8f-e17f-429a-8d09-a33654891d6c
-i	java:S131""Add a default case to this switch.(Â™ë§ùÿÿÿÿ8£Š…ß‰2J$94b6ea6b-39b7-4ac5-a7f5-b5541fb8e14a
-™
-java:S34574"Q%n should be used in place of \n to produce the platform-specific line separator.(ÊøëÎşÿÿÿÿ8¥Š…ß‰2J$c7bb9cab-02e7-403d-a029-2089962782dd
-r	java:S1064"+Replace this use of System.out by a logger.(ÊøëÎşÿÿÿÿ8¦Š…ß‰2J$8f9540b6-9177-43ac-8013-349b3a47bcc9
-r	java:S1066"+Replace this use of System.out by a logger.(øÂ–Ùÿÿÿÿÿ8¦Š…ß‰2J$d65f530d-dd74-4b62-82b1-5262d9db1163
-r	java:S106>"+Replace this use of System.out by a logger.(øÂ–Ùÿÿÿÿÿ8§Š…ß‰2J$df1dd7f3-8df6-43f9-a50a-ec2805043d9d
-r	java:S106E"+Replace this use of System.out by a logger.(î›ÿéşÿÿÿÿ8©Š…ß‰2J$af492e30-e02b-45d0-8e4e-286d455eb3b6
-r	java:S106L"+Replace this use of System.out by a logger.(øÂ–Ùÿÿÿÿÿ8©Š…ß‰2J$7703e70c-fda5-40fd-9c72-cb3925c3ec64
-™
-java:S3457Q"Q%n should be used in place of \n to produce the platform-specific line separator.(âªÛıÿÿÿÿ8ªŠ…ß‰2J$421c9e87-6fb7-4279-abe1-ffa877a7530c
-r	java:S106Q"+Replace this use of System.out by a logger.(âªÛıÿÿÿÿ8ªŠ…ß‰2J$43c18d95-725a-471f-9028-b78bc0151ed1
-”
-java:S3457R"Q%n should be used in place of \n to produce the platform-specific line separator.(Öå–à8ªŠ…ß‰2J$ae12f144-0869-4982-90c9-24ed2f5bf25d
-m	java:S106R"+Replace this use of System.out by a logger.(Öå–à8ªŠ…ß‰2J$afabbe69-f2c1-4566-a7d2-2fc5ea058b02
-™
-java:S3457S"Q%n should be used in place of \n to produce the platform-specific line separator.(š­öûÿÿÿÿ8ªŠ…ß‰2J$e4d307d1-63a0-4302-8f52-fd95a1f6ba96
-r	java:S106S"+Replace this use of System.out by a logger.(š­öûÿÿÿÿ8ªŠ…ß‰2J$77edd975-c464-4b34-ada2-15cb289e9a5b
-”
-java:S3457T"Q%n should be used in place of \n to produce the platform-specific line separator.(¢«¸›8ªŠ…ß‰2J$738fa1ce-9eb1-4274-a42d-b79ddbf1dca8
-m	java:S106T"+Replace this use of System.out by a logger.(¢«¸›8ªŠ…ß‰2J$90ac16d5-65eb-4b18-b8cf-ad3ead2af232
-m	java:S106X"+Replace this use of System.out by a logger.(è‘ †8«Š…ß‰2J$d392daf7-2789-4c1e-997a-3c239fb44e5f
-™
-java:S3457\"Q%n should be used in place of \n to produce the platform-specific line separator.(Ìšªûÿÿÿÿ8¤è…ß‰2J$102a0a9d-31d2-4b2c-bbed-268cab4b7be1
-r	java:S106\"+Replace this use of System.out by a logger.(Ìšªûÿÿÿÿ8¤è…ß‰2J$5d150775-5a5b-4736-a785-aacccbbb3149
+}
+java:S11921"[Define a constant instead of duplicating this literal "ì—†ëŠ” ê²Œì‹œê¸€ì…ë‹ˆë‹¤." 3 times.(øÂ–Ùÿÿÿÿÿ8µĞÍı‰2
+t
+java:S1192."RDefine a constant instead of duplicating this literal "ê²Œì‹œê¸€ ë²ˆí˜¸?" 3 times.(ûéì‰şÿÿÿÿ8¾ĞÍı‰2
+s
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ë÷Ìæıÿÿÿÿ8¾ĞÍı‰2
+L	java:S106"+Replace this use of System.out by a logger.(ë÷Ìæıÿÿÿÿ8¾ĞÍı‰2
+C	java:S131""Add a default case to this switch.(Â™ë§ùÿÿÿÿ8¾ĞÍı‰2
+L	java:S1061"+Replace this use of System.out by a logger.(øÂ–Ùÿÿÿÿÿ8¿ĞÍı‰2
+L	java:S1066"+Replace this use of System.out by a logger.(ÊøëÎşÿÿÿÿ8ÀĞÍı‰2
+L	java:S106="+Replace this use of System.out by a logger.(øÂ–Ùÿÿÿÿÿ8ÁĞÍı‰2
+L	java:S106F"+Replace this use of System.out by a logger.(î›ÿéşÿÿÿÿ8ÁĞÍı‰2
+L	java:S106M"+Replace this use of System.out by a logger.(øÂ–Ùÿÿÿÿÿ8ÂĞÍı‰2
+L	java:S106T"+Replace this use of System.out by a logger.(âªÛıÿÿÿÿ8ÂĞÍı‰2
+G	java:S106U"+Replace this use of System.out by a logger.(Öå–à8ÂĞÍı‰2
+L	java:S106V"+Replace this use of System.out by a logger.(š­öûÿÿÿÿ8ÂĞÍı‰2
+G	java:S106W"+Replace this use of System.out by a logger.(¢«¸›8ÃĞÍı‰2
+G	java:S106["+Replace this use of System.out by a logger.(è‘ †8ÄĞÍı‰2
+L	java:S106]"+Replace this use of System.out by a logger.(Ìšªûÿÿÿÿ8ÈĞÍı‰2

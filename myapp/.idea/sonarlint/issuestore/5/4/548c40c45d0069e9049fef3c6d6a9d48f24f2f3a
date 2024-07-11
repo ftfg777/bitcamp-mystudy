@@ -1,31 +1,19 @@
 
- 
-java:S1192T"XDefine a constant instead of duplicating this literal "ì—†ëŠ” íšŒì›ì…ë‹ˆë‹¤." 3 times.(Ùæ¾¢ıÿÿÿÿ8îŸ¥ß‰2J$9d8b0b51-1d93-4044-b0dc-d9b5662963a3
-‘
-java:S1192Q"NDefine a constant instead of duplicating this literal "íšŒì›ë²ˆí˜¸?" 3 times.(€ÃÊ×8ïŸ¥ß‰2J$5053cf97-0a03-4676-a59d-5120fae7310d
-™
-java:S3457!"Q%n should be used in place of \n to produce the platform-specific line separator.(ë÷Ìæıÿÿÿÿ8òŸ¥ß‰2J$94a25398-9896-4848-b245-b845b7183c41
-r	java:S106!"+Replace this use of System.out by a logger.(ë÷Ìæıÿÿÿÿ8òŸ¥ß‰2J$ea547131-9aec-41a7-9340-5625649328d5
-™
-java:S34573"Q%n should be used in place of \n to produce the platform-specific line separator.(­¼‰™úÿÿÿÿ8óŸ¥ß‰2J$f57bab56-c5c2-4b45-8464-dc0ad881d71e
-r	java:S1063"+Replace this use of System.out by a logger.(­¼‰™úÿÿÿÿ8óŸ¥ß‰2J$741b9c72-f702-4295-a076-e0da985b09d2
-m	java:S106H"+Replace this use of System.out by a logger.(›ä˜Æ8õŸ¥ß‰2J$7fb7d78c-fd82-4eb0-ab66-417c9a3a6153
-™
-java:S3457L"Q%n should be used in place of \n to produce the platform-specific line separator.(‡œ¤ùÿÿÿÿ8õŸ¥ß‰2J$017a603f-5b4d-4c95-bbc1-d96f93807e05
-r	java:S106L"+Replace this use of System.out by a logger.(‡œ¤ùÿÿÿÿ8õŸ¥ß‰2J$5d8828ce-c85e-44b3-b74d-5d2a476e81f1
-r	java:S106T"+Replace this use of System.out by a logger.(Ùæ¾¢ıÿÿÿÿ8öŸ¥ß‰2J$c12f97a2-5258-474a-8f68-1f8763b25f85
-”
-java:S3457X"Q%n should be used in place of \n to produce the platform-specific line separator.(¥ÇÇ8öŸ¥ß‰2J$9248944e-8276-4aaf-8f40-6aead81c8aa4
-m	java:S106X"+Replace this use of System.out by a logger.(¥ÇÇ8öŸ¥ß‰2J$521299d3-786e-45e2-84d4-46971e556912
-”
-java:S3457Y"Q%n should be used in place of \n to produce the platform-specific line separator.(Øã8öŸ¥ß‰2J$20bd5da1-a681-4ac4-887a-24b3bdd4ec65
-m	java:S106Y"+Replace this use of System.out by a logger.(Øã8öŸ¥ß‰2J$bb600901-ddff-46f4-8dcb-4266abfcf293
-™
-java:S3457Z"Q%n should be used in place of \n to produce the platform-specific line separator.(Ğıå…øÿÿÿÿ8öŸ¥ß‰2J$b615968a-7915-4da2-9b02-0a25cda98b25
-r	java:S106Z"+Replace this use of System.out by a logger.(Ğıå…øÿÿÿÿ8öŸ¥ß‰2J$02a9640e-4b6b-4bc3-8996-6f589f8d1e4e
-r	java:S106a"+Replace this use of System.out by a logger.(Ùæ¾¢ıÿÿÿÿ8÷Ÿ¥ß‰2J$22f0f7af-a92f-42ce-8a18-610fc88ec823
-r	java:S106i"+Replace this use of System.out by a logger.(î›ÿéşÿÿÿÿ8øŸ¥ß‰2J$01528df6-5f26-44be-a259-77759172e71a
-™
-java:S3457q"Q%n should be used in place of \n to produce the platform-specific line separator.(á³×íùÿÿÿÿ8ùŸ¥ß‰2J$de90e932-ecbc-40ab-bdfb-406f617ffb3a
-r	java:S106q"+Replace this use of System.out by a logger.(á³×íùÿÿÿÿ8ùŸ¥ß‰2J$11110bd9-44cd-49b3-a362-a3109244844a
-r	java:S106s"+Replace this use of System.out by a logger.(Ùæ¾¢ıÿÿÿÿ8ùŸ¥ß‰2J$31a733d7-9cd3-4d5e-ad3d-dc5c667ade9c
+k
+java:S1192>"NDefine a constant instead of duplicating this literal "íšŒì›ë²ˆí˜¸?" 3 times.(€ÃÊ×8”ßÛı‰2
+z
+java:S1192A"XDefine a constant instead of duplicating this literal "ì—†ëŠ” íšŒì›ì…ë‹ˆë‹¤." 3 times.(Ùæ¾¢ıÿÿÿÿ8–ßÛı‰2
+s
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ë÷Ìæıÿÿÿÿ8ŸßÛı‰2
+L	java:S106"+Replace this use of System.out by a logger.(ë÷Ìæıÿÿÿÿ8¡ßÛı‰2
+C	java:S131""Add a default case to this switch.(Â™ë§ùÿÿÿÿ8¢ßÛı‰2
+G	java:S1067"+Replace this use of System.out by a logger.(›ä˜Æ8£ßÛı‰2
+L	java:S1069"+Replace this use of System.out by a logger.(…©¬êÿÿÿÿÿ8£ßÛı‰2
+L	java:S106A"+Replace this use of System.out by a logger.(Ùæ¾¢ıÿÿÿÿ8¤ßÛı‰2
+G	java:S106G"+Replace this use of System.out by a logger.(¥ÇÇ8¤ßÛı‰2
+G	java:S106H"+Replace this use of System.out by a logger.(Øã8¥ßÛı‰2
+L	java:S106I"+Replace this use of System.out by a logger.(Ğıå…øÿÿÿÿ8¥ßÛı‰2
+L	java:S106P"+Replace this use of System.out by a logger.(Ùæ¾¢ıÿÿÿÿ8¥ßÛı‰2
+L	java:S106Z"+Replace this use of System.out by a logger.(î›ÿéşÿÿÿÿ8¦ßÛı‰2
+L	java:S106a"+Replace this use of System.out by a logger.(Ùæ¾¢ıÿÿÿÿ8§ßÛı‰2
+L	java:S106f"+Replace this use of System.out by a logger.(á³×íùÿÿÿÿ8¨ßÛı‰2

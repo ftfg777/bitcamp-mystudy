@@ -1,14 +1,18 @@
 
- 	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8ôæë°‰2J$5624ab26-9753-46a7-8604-3b1d1ea754fd
+Q
+java:S3740A"/Provide the parametrized type for this generic.(ÑÅœøùÿÿÿÿ8áĞı‰2
+ 	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8ôæë°‰2J$fcbfc4d8-85c2-49f7-a050-5f141fa4624f
 |
 java:S5993
-"9Change the visibility of this constructor to "protected".(¸ĞÀ×8ôæë°‰2J$e1513238-df1b-4af2-b820-dbe87d19c30a
-r	java:S106!"+Replace this use of System.out by a logger.(ÿ”Ğûÿÿÿÿ8öæë°‰2J$ca441468-b1d7-4a82-a4fc-e48d7d8b6ab5
-r	java:S106("+Replace this use of System.out by a logger.(‰×˜™ùÿÿÿÿ8öæë°‰2J$988d256d-5070-4d1d-97e5-48074ac6cbaa
+"9Change the visibility of this constructor to "protected".(¸ĞÀ×8ôæë°‰2J$e76596f8-9b20-49be-bcbd-0242fa8828eb
+r
+java:S1149A"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(ÑÅœøùÿÿÿÿ8‚áĞı‰2
+r	java:S106""+Replace this use of System.out by a logger.(ÿ”Ğûÿÿÿÿ8öæë°‰2J$2505d929-ee58-49d1-8694-b0316808729e
+r	java:S106)"+Replace this use of System.out by a logger.(‰×˜™ùÿÿÿÿ8öæë°‰2J$95baaf91-b7cd-4f02-a4fb-96ead830fdf5
 ™
-java:S3457/"Q%n should be used in place of \n to produce the platform-specific line separator.(üæ°øıÿÿÿÿ8öæë°‰2J$d90cbdd2-0403-462c-b1da-49dec34813d7
-r	java:S106/"+Replace this use of System.out by a logger.(üæ°øıÿÿÿÿ8öæë°‰2J$cd69d7e0-babf-4cff-9aaa-1b0de312b860
+java:S34570"Q%n should be used in place of \n to produce the platform-specific line separator.(üæ°øıÿÿÿÿ8öæë°‰2J$0d858eea-b7fa-44a2-a8ef-22b11bdeaea7
+r	java:S1060"+Replace this use of System.out by a logger.(üæ°øıÿÿÿÿ8öæë°‰2J$d70c6211-4cd7-47e6-aa6c-887f44ec6d44
 ”
-java:S34571"Q%n should be used in place of \n to produce the platform-specific line separator.(óı‡8öæë°‰2J$05c3e139-d48f-4c4a-8002-999e49e681e9
-m	java:S1061"+Replace this use of System.out by a logger.(óı‡8öæë°‰2J$f0536516-7638-46d1-aa44-d8bb98c44985
-m	java:S1063"+Replace this use of System.out by a logger.(ñÊ§§8öæë°‰2J$acbecff3-25f9-42d7-94c5-007f40cc0601
+java:S34572"Q%n should be used in place of \n to produce the platform-specific line separator.(óı‡8öæë°‰2J$7bfa2cbe-ffc4-4daa-9cb0-909b184375bd
+m	java:S1062"+Replace this use of System.out by a logger.(óı‡8öæë°‰2J$6eba13ff-786e-4a61-a128-a416bec57b6f
+m	java:S1064"+Replace this use of System.out by a logger.(ñÊ§§8öæë°‰2J$9f123673-eb7e-4773-aebe-8f7474f9f76e

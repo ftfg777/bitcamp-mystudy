@@ -5,10 +5,9 @@ public class LinkedList extends AbstractList {
     private Node first;
     private Node last;
 
-
     @Override
-    public void add(Object obj) {
-        Node newNode = new Node(obj);
+    public void add(Object value) {
+        Node newNode = new Node(value);
 
         if (first == null) {
             last = first = newNode;
@@ -17,6 +16,25 @@ public class LinkedList extends AbstractList {
             last = newNode;
         }
         size++;
+    }
+
+    @Override
+    public Object get(int index) {
+        if (index < 0 || index >= size) {
+            return null;
+        }
+
+        Node cursor = first;
+        int currentIndex = 0;
+
+        while (cursor != null) {
+            if (currentIndex == index) {
+                return cursor.value;
+            }
+            cursor = cursor.next;
+            currentIndex++;
+        }
+        return null;
     }
 
     @Override
@@ -59,6 +77,21 @@ public class LinkedList extends AbstractList {
     }
 
     @Override
+    public int indexOf(Object value) {
+        Node cursor = first;
+        int currentIndex = 0;
+
+        while (cursor != null) {
+            if (cursor.value.equals(value)) {
+                return currentIndex;
+            }
+            cursor = cursor.next;
+            currentIndex++;
+        }
+        return -1;
+    }
+
+    @Override
     public Object[] toArray() {
         Object[] arr = new Object[size];
 
@@ -71,47 +104,10 @@ public class LinkedList extends AbstractList {
         return arr;
     }
 
-    @Override
-    public int indexOf(Object obj) {
-        Node cursor = first;
-        int currentIndex = 0;
-
-        while (cursor != null) {
-            if (cursor.value.equals(obj)) {
-                return currentIndex;
-            }
-            cursor = cursor.next;
-            currentIndex++;
-        }
-        return -1;
-    }
-
-
-    @Override
-    public Object get(int index) {
-        if (index < 0 || index >= size) {
-            return null;
-        }
-
-        Node cursor = first;
-        int currentIndex = 0;
-
-        while (cursor != null) {
-            if (currentIndex == index) {
-                return cursor.value;
-            }
-            cursor = cursor.next;
-            currentIndex++;
-        }
-        return null;
-    }
-
-
-    // static nested class
-    static class Node {
+    public static class Node {
 
         Object value;
-        Node next;
+        bitcamp.myapp.util.Node next;
 
         public Node(Object value) {
             this.value = value;
