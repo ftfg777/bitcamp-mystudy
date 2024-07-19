@@ -1,4 +1,4 @@
 
-r
-java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(É¸÷Úûÿÿÿÿ8¾˜Ïı‰2
-r	java:S106"+Replace this use of System.out by a logger.(Şñÿÿÿÿÿ8¤ñÎı‰2J$121e5947-24ab-45f1-a1c2-d91f9e729200
+L
+java:S1172"/Remove this unused method parameter "menuName".(ª¿ƒ¥8ÔÜ£‹2
+r	java:S106"+Replace this use of System.out by a logger.(Şñÿÿÿÿÿ8¤ñÎı‰2J$272569b7-e27f-44c5-a5aa-67beb086a60d

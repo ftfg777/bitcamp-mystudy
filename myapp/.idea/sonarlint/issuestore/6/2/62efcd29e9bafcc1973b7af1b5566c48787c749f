@@ -1,0 +1,7 @@
+
+^
+java:S3626"Remove this redundant jump.(ûÁÝ…8§ñï¦‹2J$cca3141b-5c22-45e7-bc03-7777eae6d3f0
+™
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ë÷Ìæýÿÿÿÿ8¨ñï¦‹2J$a2231aa0-e7de-461c-bc84-87369f9b69cc
+r	java:S106"+Replace this use of System.out by a logger.(ë÷Ìæýÿÿÿÿ8¨ñï¦‹2J$9263d773-26f9-405d-a5e4-c03ccd8ba2e0
+r	java:S106"+Replace this use of System.out by a logger.(øÂ–Ùÿÿÿÿÿ8¨ñï¦‹2J$246f32a9-d2d9-4cbd-aa6f-155d1dea3f82

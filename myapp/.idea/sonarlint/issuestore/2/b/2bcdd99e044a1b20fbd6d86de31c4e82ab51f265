@@ -1,26 +1,30 @@
 
-r
-java:S3740"/Provide the parametrized type for this generic.(Ÿ¯±¼8†ŠÈı‰2J$23fb7a3f-6884-45a5-acff-34e84b76a48d
-r
-java:S3740"/Provide the parametrized type for this generic.(Ÿ¯±¼8†ŠÈı‰2J$6b0154ac-7af6-4f83-a8b7-85547c20f0ab
-w
-java:S3740w"/Provide the parametrized type for this generic.(ÑÅœøùÿÿÿÿ8†ŠÈı‰2J$9c4a3047-e934-4564-930b-aac51c070140
-“
-java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Ÿ¯±¼8ŒŠÈı‰2J$f0127833-71ab-4670-bf06-85a4be6e4467
-˜
-java:S1149w"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(ÑÅœøùÿÿÿÿ8ŒŠÈı‰2J$6ac0bb1a-ac6b-4404-b031-34fd28c24c0f
-r	java:S106>"+Replace this use of System.out by a logger.(ÿ”Ğûÿÿÿÿ8½ş·ı‰2J$ab197ff8-86f6-481f-a425-d9f18a296a50
-r	java:S106F"+Replace this use of System.out by a logger.(‰×˜™ùÿÿÿÿ8½ş·ı‰2J$2f4711d4-de23-42db-a915-7db37bded855
-r	java:S106J"+Replace this use of System.out by a logger.(ú˜ ®ûÿÿÿÿ8½ş·ı‰2J$bf8b43eb-c132-412d-aabc-edab4e3daba8
-m	java:S106W"+Replace this use of System.out by a logger.(œÓ¥¨8½ş·ı‰2J$cf62e0fe-3b86-4e2f-a697-65072a2c66f2
-r	java:S106X"+Replace this use of System.out by a logger.(ËÂ±ˆúÿÿÿÿ8½ş·ı‰2J$02b7be69-c112-4691-aa93-bdaf6fd616c3
-™
-java:S3457\"Q%n should be used in place of \n to produce the platform-specific line separator.(¯Ã¦ÿÿÿÿÿ8½ş·ı‰2J$24b6358f-0c62-4fe5-b31a-d69e45eb9791
-r	java:S106\"+Replace this use of System.out by a logger.(¯Ã¦ÿÿÿÿÿ8½ş·ı‰2J$d7f1b01f-596b-4b73-aaf6-0de52966de6e
-”
-java:S3457_"Q%n should be used in place of \n to produce the platform-specific line separator.(óı‡8½ş·ı‰2J$99eaef87-e166-4acb-b4f4-89a9c1c445ed
-m	java:S106_"+Replace this use of System.out by a logger.(óı‡8¾ş·ı‰2J$fdcb9d36-255e-4213-b0f6-e86c1c0c2119
-m	java:S106c"+Replace this use of System.out by a logger.(œÓ¥¨8¾ş·ı‰2J$1d1d409d-8744-4e00-858f-fa48629cabbe
-™
-java:S3457q"Q%n should be used in place of \n to produce the platform-specific line separator.(º†àÄøÿÿÿÿ8¾ş·ı‰2J$20a7ffd6-5f5a-463d-b384-5b21d5c8ebc7
-r	java:S106q"+Replace this use of System.out by a logger.(º†àÄøÿÿÿÿ8¾ş·ı‰2J$a70b5b79-3382-465a-99b1-76c815e302e5
+}
+java:S1141o"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8£Õ†ĞŒ2J$45dc13c4-743c-4d82-9c0b-9f8804b00ff4
+~
+java:S1141‰"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8¤Õ†ĞŒ2J$da7a1b52-b89f-43aa-bd24-85631852c4cf
+~
+java:S1141£"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8øÍ’ĞŒ2J$9bb833d5-daa4-4297-b4e8-9ccea6098512
+j
+java:S2189n""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8¤Õ†ĞŒ2J$d11bd218-75df-48d2-aaea-833c738ad265
+{
+java:S1854U"8Remove this useless assignment to local variable "line".(¦¤Ÿº8°Õ†ĞŒ2J$3f20b942-1a67-43e1-b9a1-2e964f92f19d
+
+java:S1854T"<Remove this useless assignment to local variable "appTitle".(ÈªÕØ8°Õ†ĞŒ2J$7c077702-2984-483e-85ca-48758c8a09b0
+p
+java:S1481T"-Remove this unused "appTitle" local variable.(ÈªÕØ8°Õ†ĞŒ2J$0a1e6345-90a7-447e-a215-7a6315021462
+l
+java:S1481U")Remove this unused "line" local variable.(¦¤Ÿº8±Õ†ĞŒ2J$5a396af2-8f50-45bc-a36c-8c6dde010198
+m	java:S106Z"+Replace this use of System.out by a logger.(‘Û…Ì8±Õ†ĞŒ2J$4ecb96ad-b3f1-4ade-8cb3-dc38f232408e
+r	java:S106`"+Replace this use of System.out by a logger.(ú˜ ®ûÿÿÿÿ8±Õ†ĞŒ2J$e13fdbbe-90bb-445c-95b2-406a60311f65
+m	java:S106i"+Replace this use of System.out by a logger.(«¡¸8²Õ†ĞŒ2J$b2efc577-1107-4310-98b4-a5b199130102
+n	java:S106"+Replace this use of System.out by a logger.(¨¾‰8¶Õ†ĞŒ2J$845c96f4-112b-4b65-b5d4-380eea12be86
+	java:S125‚"<This block of commented-out lines of code should be removed.(†€éˆ8¶Õ†ĞŒ2J$e2a4f0e7-3eef-4ba5-b26b-2b11495565bd
+n	java:S106›"+Replace this use of System.out by a logger.(ıàÁû8ºÕ†ĞŒ2J$bf383ddb-b642-410d-8d55-337b4090a374
+	java:S125œ"<This block of commented-out lines of code should be removed.(†€éˆ8ºÕ†ĞŒ2J$4dae127f-be84-4e79-936e-9978dd023479
+s	java:S106µ"+Replace this use of System.out by a logger.(æ—¹Âüÿÿÿÿ8»Õ†ĞŒ2J$d28f35e2-3d4c-4b4d-85a7-8434cc4157ce
+	java:S125¶"<This block of commented-out lines of code should be removed.(†€éˆ8»Õ†ĞŒ2J$503f3968-353f-4b72-a778-1d5cb9971d1b
+n	java:S106¾"+Replace this use of System.out by a logger.(ãŸœ8»Õ†ĞŒ2J$9a9be3e2-db1b-48db-b542-ac387c2d0caf
+n	java:S106É"+Replace this use of System.out by a logger.(àÌî…8¼Õ†ĞŒ2J$6ff15903-88b8-4ea1-a3a8-a3e756ae34a8
+n	java:S106Ö"+Replace this use of System.out by a logger.(Ëˆ‰°8¼Õ†ĞŒ2J$3af3de26-c63f-4ff5-a430-31106010170d
+s	java:S106ã"+Replace this use of System.out by a logger.(§ˆëøÿÿÿÿ8¼Õ†ĞŒ2J$f8387288-3265-4f0c-ab08-8580072c9d5a

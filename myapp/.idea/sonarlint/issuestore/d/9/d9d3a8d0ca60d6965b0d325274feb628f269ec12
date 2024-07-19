@@ -1,0 +1,24 @@
+
+ 	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8â·µ¡‹2J$8a032740-b723-4fd2-a0fd-9ea3873f3ab1
+s
+java:S2160"+Override the "equals" method in this class.(ı’ó€ÿÿÿÿÿ8©ÉÏ¢‹2J$763c8c02-a20c-4f3f-b96a-480168f9453e
+˜
+java:S1450	"URemove the "parent" field and declare it as a local variable in the relevant methods.(¦òØò8Û–½¡‹2J$f5942892-894b-47b8-b58a-495c2a38d7f0
+“
+java:S1149
+"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Äª‘Ø8ã·µ¡‹2J$3009433c-b848-4272-b138-1d8f4dc13715
+r	java:S106+"+Replace this use of System.out by a logger.(ÿ”Ğûÿÿÿÿ8ç·µ¡‹2J$cb1243ad-a0c5-4ea9-9b7f-b04e5b54e58f
+r	java:S1062"+Replace this use of System.out by a logger.(‰×˜™ùÿÿÿÿ8ç·µ¡‹2J$45603331-3990-4574-b996-76faa58126b6
+”
+java:S3457G"Q%n should be used in place of \n to produce the platform-specific line separator.(ÓŒ…ß8©ÉÏ¢‹2J$0b147a0f-cfaf-44a4-9742-fda418d33e88
+m	java:S106G"+Replace this use of System.out by a logger.(ÓŒ…ß8é·µ¡‹2J$028af8e8-36ef-40d8-a3b5-6d92cc3fc511
+“
+java:S3457J"Q%n should be used in place of \n to produce the platform-specific line separator.(ŞÉè(8ªÉÏ¢‹2J$00b3d08c-8fb8-4b97-af48-a397c0037803
+l	java:S106J"+Replace this use of System.out by a logger.(ŞÉè(8é·µ¡‹2J$f2b991be-4817-4b65-a52a-44d29c3f4102
+™
+java:S3457L"Q%n should be used in place of \n to produce the platform-specific line separator.(Ç‚ö‘ùÿÿÿÿ8Äö×¢‹2J$e7e252a9-95e1-4ee9-bc80-e403f77f9df9
+r	java:S106L"+Replace this use of System.out by a logger.(Ç‚ö‘ùÿÿÿÿ8é·µ¡‹2J$e418f144-1a36-423e-b997-83bf36888d94
+
+java:S6201U"LReplace this instanceof check and cast with 'instanceof MenuGroup menugroup'(¼ŸÚ@8•É·¡‹2J$a62929c1-69b8-490b-a960-d5d74778da7d
+m
+java:S1068	"*Remove this unused "parent" private field.(¦òØò8ì·µ¡‹2J$bba7b36b-60a2-486b-aee4-8c299c40e16f
