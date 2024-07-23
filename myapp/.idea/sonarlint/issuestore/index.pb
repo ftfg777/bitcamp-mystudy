@@ -72,3 +72,11 @@ Capp/src/main/java/bitcamp/myapp/command/user/UserUpdateCommand.java,2/a/2a76a9
 app/user.csv,5/0/50f3d3cdd9de152773132f0bc0ba59a0d88ad403
 =
 app/board.csv,6/a/6a242f82fea6fbe2e6094f611bb22998464bc0f0
+=
+app/user.json,0/7/07e11c3799c2a7854b2a99146cb1ea1ff259707a
+>
+app/board.json,e/c/ecccde5b408104b26b4d6a503655ee9e762cc289
+b
+2app/src/main/java/bitcamp/myapp/vo/SequenceNo.java,2/5/25240b52086e14a8865bd679592cb9c534e092d4
+@
+app/project.json,9/3/937ee0999f4cbd12b020672f932032a42b06c3e2
