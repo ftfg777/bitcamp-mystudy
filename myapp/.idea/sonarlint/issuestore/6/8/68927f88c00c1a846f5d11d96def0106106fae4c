@@ -1,10 +1,7 @@
 
-L
-java:S3740"/Provide the parametrized type for this generic.(ëÍàª8¸æí¦‹2
-’
-java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ë÷ÌæıÿÿÿÿJ$31bf7993-c0c7-48ac-87f0-548736fa0920
-k	java:S106"+Replace this use of System.out by a logger.(ë÷ÌæıÿÿÿÿJ$f84fb3f9-fdb5-4e8e-ad73-fa952354b659
-G	java:S106"+Replace this use of System.out by a logger.(è‘ †8»æí¦‹2
-s
-java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(Ìšªûÿÿÿÿ8¼æí¦‹2
-L	java:S106"+Replace this use of System.out by a logger.(Ìšªûÿÿÿÿ8¼æí¦‹2
+r	java:S106"+Replace this use of System.out by a logger.(î™åÊûÿÿÿÿ8ÖßÇ2J$40fd9bf8-3d44-40b4-83eb-a57847c21fd0
+m	java:S106"+Replace this use of System.out by a logger.(è‘ †8ÖßÇ2J$f51583bb-b4a6-4309-85fd-94c89c66f09e
+™
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(Ìšªûÿÿÿÿ8œÆæÊ2J$f91a0b00-4498-44f6-975e-3f2aa9177f11
+r	java:S106"+Replace this use of System.out by a logger.(Ìšªûÿÿÿÿ8ÖßÇ2J$23367c2b-30c8-4a23-a670-92b57af736a9
+r	java:S106"+Replace this use of System.out by a logger.(¦ğœ“ÿÿÿÿÿ8ÖßÇ2J$4f85d23a-dc60-4ca1-9148-1160a8d429d0

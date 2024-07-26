@@ -1,0 +1,10 @@
+
+}
+java:S1141*"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8’ü¸Î2J$b37977c0-8491-4569-8d11-f6ca43753102
+	java:S112J"FDefine and throw a dedicated exception instead of using a generic one.(İ‚õÊüÿÿÿÿ8“ü¸Î2J$9593b9e4-efd3-4cdf-b0ce-b8cc205e94a6
+
+java:S1192T"VUse already-defined constant 'DEFAULT_DATANAME' instead of duplicating its value here.(›€îùÿÿÿÿ8“ü¸Î2J$4875e822-119d-4404-ba41-5b5232d6837f
+r	java:S106?"+Replace this use of System.out by a logger.(ÆÍöÊûÿÿÿÿ8¡ü¸Î2J$d3c14feb-b811-4f38-942c-82af2bc208e6
+r	java:S106E"+Replace this use of System.out by a logger.(‡ä¹ªøÿÿÿÿ8¡ü¸Î2J$df0084c3-03d0-4f99-a2e9-868a3496c6ea
+ª
+java:S4087y"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(€¶º‡ıÿÿÿÿ8¢ü¸Î2J$1f2365c5-1e6d-406f-bbe8-724dbba46a0a

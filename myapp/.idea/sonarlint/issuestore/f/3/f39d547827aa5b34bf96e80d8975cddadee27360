@@ -1,0 +1,12 @@
+
+}
+java:S1141'"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ğëæ2J$c00d0b90-b7f0-4648-937a-1d1441ec0f7c
+	java:S112F"FDefine and throw a dedicated exception instead of using a generic one.(İ‚õÊüÿÿÿÿ8¬¥ìæ2J$76f2564f-3463-4e61-9733-f3e9524c9c43
+
+java:S1192P"VUse already-defined constant 'DEFAULT_DATANAME' instead of duplicating its value here.(›€îùÿÿÿÿ8ñëæ2J$9af067b5-2e03-4867-8ddd-d20e409cc4b7
+’
+java:S2095""JUse try-with-resources or close this "XSSFWorkbook" in a "finally" clause.(à¦àıùÿÿÿÿ8ñëæ2J$fe38b024-1e3a-43f1-ae8a-f05cba0a87ef
+r	java:S106;"+Replace this use of System.out by a logger.(ÆÍöÊûÿÿÿÿ8øëæ2J$9ba04529-fe6c-44b7-8211-5a35a8608ee2
+r	java:S106A"+Replace this use of System.out by a logger.(‡ä¹ªøÿÿÿÿ8øëæ2J$d723c8a7-7f1f-4abc-aec0-5d7957713e38
+ª
+java:S4087t"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(€¶º‡ıÿÿÿÿ8ùëæ2J$75dab2f2-078d-481a-aa11-42f44a08688d

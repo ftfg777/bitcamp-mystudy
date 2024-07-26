@@ -1,8 +1,14 @@
 
-s
-java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ë÷Ìæýÿÿÿÿ8ð©î¦‹2
-k	java:S106"+Replace this use of System.out by a logger.(ë÷ÌæýÿÿÿÿJ$077cdf5e-6c5d-4caf-bc21-e22495ad4cdc
 ™
-java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ÊøëÎþÿÿÿÿ8ÍÒë¦‹2J$fae7347a-7cb5-4720-a081-f1680241d754
-k	java:S106"+Replace this use of System.out by a logger.(ÊøëÎþÿÿÿÿJ$47198449-eead-4c8c-9e79-24ab4b139005
-L	java:S106"+Replace this use of System.out by a logger.(øÂ–Ùÿÿÿÿÿ8ñ©î¦‹2
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ë÷Ìæýÿÿÿÿ8ï ’ÈŽ2J$da12aadf-2558-4d24-8c72-40aab00dd665
+r	java:S106"+Replace this use of System.out by a logger.(ë÷Ìæýÿÿÿÿ8ð ’ÈŽ2J$5620b72a-ba83-4103-9817-50ac313aae85
+r	java:S106"+Replace this use of System.out by a logger.(øÂ–Ùÿÿÿÿÿ8ð ’ÈŽ2J$e3a39f3a-a10a-42f3-b767-748ddee568ed
+™
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ÊøëÎþÿÿÿÿ8ä¨“ÈŽ2J$280930f7-472d-45dc-ba76-fb4a46b53b0a
+r	java:S106"+Replace this use of System.out by a logger.(ÊøëÎþÿÿÿÿ8ð ’ÈŽ2J$e15c22ce-0f50-42f8-8c27-19b4d7286c22
+”
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(•‰ÚÒ8ä¨“ÈŽ2J$a83ffe4c-3ce9-4c26-9ed2-bd14040664b3
+h
+java:S3457"%String contains no format specifiers.(•‰ÚÒ8ä¨“ÈŽ2J$ae740445-cf88-4e74-833e-2a75b4ba0b69
+m	java:S106"+Replace this use of System.out by a logger.(•‰ÚÒ8ä¨“ÈŽ2J$3b35547d-3185-40bd-a737-bc6d79cb4fd0
+r	java:S106#"+Replace this use of System.out by a logger.(®·õÇúÿÿÿÿ8ä¨“ÈŽ2J$99630f4d-3324-424b-a776-33a6278a205a

@@ -1,7 +1,7 @@
 
-^
-java:S3626"Remove this redundant jump.(ûÁİ…8§ñï¦‹2J$cca3141b-5c22-45e7-bc03-7777eae6d3f0
-™
-java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ë÷Ìæıÿÿÿÿ8¨ñï¦‹2J$a2231aa0-e7de-461c-bc84-87369f9b69cc
-r	java:S106"+Replace this use of System.out by a logger.(ë÷Ìæıÿÿÿÿ8¨ñï¦‹2J$9263d773-26f9-405d-a5e4-c03ccd8ba2e0
-r	java:S106"+Replace this use of System.out by a logger.(øÂ–Ùÿÿÿÿÿ8¨ñï¦‹2J$246f32a9-d2d9-4cbd-aa6f-155d1dea3f82
+r	java:S106"+Replace this use of System.out by a logger.(î™åÊûÿÿÿÿ8Éå€È2J$498afb65-ec67-4b4d-8c70-66b1864556c8
+r	java:S106"+Replace this use of System.out by a logger.(øÂ–Ùÿÿÿÿÿ8Éå€È2J$c6b074ec-d021-47ab-aa4d-7594fdb26644
+r	java:S106"+Replace this use of System.out by a logger.(î›ÿéşÿÿÿÿ8Éå€È2J$4f87384c-a0a2-4444-8812-c9cf0856785a
+r	java:S106!"+Replace this use of System.out by a logger.(î›ÿéşÿÿÿÿ8Éå€È2J$c5f0a26d-bea4-4a6a-8b2e-8cd2c737972d
+m	java:S106#"+Replace this use of System.out by a logger.(³ÆæÃ8îĞÈ2J$8612c1c5-a21d-4488-be62-8a25303a6a30
+G	java:S106'"+Replace this use of System.out by a logger.(©€•‰8ù‚È2

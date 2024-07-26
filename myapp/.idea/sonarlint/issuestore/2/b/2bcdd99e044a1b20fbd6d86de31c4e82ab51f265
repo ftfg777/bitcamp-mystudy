@@ -1,8 +1,8 @@
 
-m	java:S106\"+Replace this use of System.out by a logger.(‘Û…Ì8İ—“Å2J$73807dab-6d11-4544-8548-a096337bb3a6
-r	java:S106b"+Replace this use of System.out by a logger.(ú˜ ®ûÿÿÿÿ8İ—“Å2J$e1644f51-e038-4d4e-9d38-46841faba071
-m	java:S106l"+Replace this use of System.out by a logger.(«¡¸8Ş—“Å2J$7145ab3e-77df-401f-87b5-f2045e2344b7
-s	java:S106™"+Replace this use of System.out by a logger.(åÉ—àùÿÿÿÿ8å—“Å2J$c4974a6c-c1c2-429c-8db7-3c963010c3ce
-	java:S125š"<This block of commented-out lines of code should be removed.(†€éˆ8å—“Å2J$3af26fda-0633-4731-89ce-abca9325d2b6
-n	java:S106¢"+Replace this use of System.out by a logger.(ãŸœ8ë—“Å2J$03815f11-388d-409b-87e8-7969582cd254
-n	java:S106®"+Replace this use of System.out by a logger.(‹ŒèÈ8í—“Å2J$5bfa6e73-830e-48eb-884e-61f25f13d521
+†
+java:S1144 ">Remove this unused private "removeApplicationListener" method.(™Ÿüşÿÿÿÿ8¿¹êë2J$c016d703-763d-455a-891a-b488c2b2f424
+r	java:S106,"+Replace this use of System.out by a logger.(ıî¼Íıÿÿÿÿ8Â¹êë2J$5e6beda1-addb-4b2f-b97b-e6b6449e62a0
+m	java:S1063"+Replace this use of System.out by a logger.(‘Û…Ì8Ã¹êë2J$f8a825ce-7814-4606-8da3-d1e9828bf185
+k	java:S1085")Either remove or fill this block of code.(Úîø›8Ä¹êë2J$c375373c-47de-4ce1-9a74-476e81d63280
+r	java:S1069"+Replace this use of System.out by a logger.(ú˜ ®ûÿÿÿÿ8Æ¹êë2J$1b04e70b-2730-4dff-b7d9-c6afa971ab7f
+m	java:S106B"+Replace this use of System.out by a logger.(“…‘á8É¹êë2J$7b9811dd-3245-4f85-ac21-0337617da466

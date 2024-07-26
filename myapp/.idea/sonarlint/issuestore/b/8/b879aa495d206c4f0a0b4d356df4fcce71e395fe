@@ -1,6 +1,9 @@
 
 s
-java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ë÷Ìæýÿÿÿÿ8ÔÄý¥Œ2
-L	java:S106"+Replace this use of System.out by a logger.(ë÷Ìæýÿÿÿÿ8ÔÄý¥Œ2
-G	java:S106"+Replace this use of System.out by a logger.(›ä˜Æ8ÔÄý¥Œ2
-L	java:S106"+Replace this use of System.out by a logger.(…©¬êÿÿÿÿÿ8ÔÄý¥Œ2
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ë÷Ìæýÿÿÿÿ8µýêÄŽ2
+L	java:S106"+Replace this use of System.out by a logger.(ë÷Ìæýÿÿÿÿ8¹ýêÄŽ2
+G	java:S106"+Replace this use of System.out by a logger.(›ä˜Æ8ºýêÄŽ2
+s
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(…©¬êÿÿÿÿÿ8ºýêÄŽ2
+L	java:S106"+Replace this use of System.out by a logger.(…©¬êÿÿÿÿÿ8ºýêÄŽ2
+L	java:S106"+Replace this use of System.out by a logger.(¦ðœ“ÿÿÿÿÿ8ºýêÄŽ2
